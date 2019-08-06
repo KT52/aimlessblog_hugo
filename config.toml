@@ -1,0 +1,57 @@
+baseURL = ""
+languageCode = "jp"
+title = "My New Hugo Site"
+theme="kiss"
+
+hasCJKLanguage = true
+enableInlineShortcodes = false
+pygmentsUseclasses = false
+pygmentsCodefences = true
+copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2019"
+
+[blackfriday]
+hrefTargetBlank = true
+
+googleAnalytics = ""
+Paginate = 5
+summaryLength = 70
+
+[params.assets]
+customCSS = ["css/custom.css"]
+
+[taxonomies]
+tag ="tags"
+categories = "categories"
+
+[params]
+    description = "A minimal Hugo theme"
+    dateFormatToUse = "2006-01-02"
+    replaceGoogleFonts = "fonts.loli.net"
+    themeColor = "theme-base-0e"
+
+[permalinks]
+  post = "/:year/:month/:slug/"
+
+[params.sections_left]
+"/tags/" = "Tags"
+"/categories/" = "Categories"
+
+[params.info]
+adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+codeCopy = false # Add copy button above code blocks
+
+[params.social]
+twitter = ""
+github = "Squigly77"
+email = ""
+tumblr = "https://lollapal00za.tumblr.com/"
+rss = "index.xml" # Add this to show RSS button in social.
+
+[params.social.config]
+platforms = ["github","facebook","twitter","instagram","email","tumblr"]
+
+
