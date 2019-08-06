@@ -1,0 +1,9 @@
+[submodule "themes/arabica"]
+	path = themes/arabica
+	url = https://github.com/nirocfz/arabica.git
+[submodule "themes/kiera"]
+	path = themes/kiera
+	url = https://github.com/avianto/hugo-kiera.git
+[submodule "themes/kiss"]
+	path = themes/kiss
+	url = https://github.com/ribice/kiss.git
