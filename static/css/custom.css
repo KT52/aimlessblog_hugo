@@ -1,3 +1,19 @@
+.content pre code {
+  font-size: 90%;
+  /*font-size: 100%;*/
+  padding: 1em;
+  line-height: 1.5;
+}
+
+pre,
+pre code {
+    font-size: 100%;
+  /*background-color: #f5f7fa;*/
+  background-color: #040404;
+  /*color: #42464c;*/
+  color: #FFF;
+}
+
 /* Background */ .chroma { color: #ffffff; background-color: #111111 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
@@ -56,17 +72,5 @@
 .content h5,
 .content h6,
 
-.content pre code {
-  font-size: 90%;
-  /*font-size: 100%;*/
-  padding: 1em;
-  line-height: 1.5;
-}
 
-pre,
-pre code {
-  /*background-color: #f5f7fa;*/
-  background-color: #040404;
-  /*color: #42464c;*/
-  color: #FFF;
-}
+
