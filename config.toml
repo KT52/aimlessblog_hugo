@@ -1,12 +1,12 @@
 baseURL = ""
 languageCode = "jp"
-title = "My New Hugo Site"
+title = "Aimless Blog"
 theme="kiss"
 
 hasCJKLanguage = true
 enableInlineShortcodes = false
 pygmentsUseclasses = false
-pygmentsCodefences = true
+pygmentsCodeFences = true
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2019"
 
 [blackfriday]
@@ -39,7 +39,7 @@ categories = "categories"
 [params.info]
 adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
-homeTitle = "" # Title for home page
+homeTitle = "Aimless Blog" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = false # Add copy button above code blocks
@@ -48,10 +48,10 @@ codeCopy = false # Add copy button above code blocks
 twitter = ""
 github = "Squigly77"
 email = ""
-tumblr = "https://lollapal00za.tumblr.com/"
+tumblr = "lollapal00za"
 rss = "index.xml" # Add this to show RSS button in social.
 
 [params.social.config]
-platforms = ["github","facebook","twitter","instagram","email","tumblr"]
+platforms = ["github","facebook","twitter","instagram","email","tumblr","rss"]
 
 

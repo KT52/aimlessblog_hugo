@@ -5,6 +5,8 @@ categories: [Python]
 tags: [python]
 slug: linenotify
 related_posts: linescraping, herokulinenotify
+adsenseTop: true
+adsenseBottom: true
 ---
 ## LINE Notifyとは？
 

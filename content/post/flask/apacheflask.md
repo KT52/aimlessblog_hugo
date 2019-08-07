@@ -3,6 +3,8 @@ title: "CentOS7・ApacheでFlaskを動かす"
 date: 2019-02-25
 tags: ["apache","flask"]
 slug: "apacheflask"
+adsenseTop: true
+adsenseBottom: true
 ---
 
 先月下旬にVPS環境でCentOS7にApache、PHP、MariaDBを入れて動かしてみたLinux初心者が今度はFlaskを入れて動かしてみました。

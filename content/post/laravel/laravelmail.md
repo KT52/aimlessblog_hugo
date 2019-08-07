@@ -5,6 +5,8 @@ categories: [Laravel]
 tags: [laravel,php]
 slug: laravelmail
 related_posts: laravelauth
+adsenseTop: true
+adsenseBottom: true
 ---
 
 [前回](https://www.ravness.com/2018/07/laravelauth)

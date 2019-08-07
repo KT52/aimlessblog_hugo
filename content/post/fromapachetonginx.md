@@ -4,6 +4,8 @@ date: 2019-08-05
 categories: ["Misc"]
 tags: ["nginx",vps]
 slug: fromapachetonginx
+adsenseTop: true
+adsenseBottom: true
 ---
 
 ApacheからNginxに移行するときにした事のメモ。

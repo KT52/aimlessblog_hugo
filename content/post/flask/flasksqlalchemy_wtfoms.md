@@ -4,6 +4,8 @@ date: 2019-07-15
 categories: [Python]
 tags: [python,flask]
 slug: flasksqlalchemy_wtfoms1
+adsenseTop: true
+adsenseBottom: true
 ---
 
 Flaskはローカルで使用してたのでデータベースはSQLを直に書いていたのですが、LaravelのEloquent ORMを利用してSQLAlchemyにも興味を持ったので[Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)を使ってみました。
@@ -55,7 +57,7 @@ class User(db.Model):
 データベースはSQLite3を使用します。id（プライマリーキー、整数型）,username,jobの3つのカラムを持ったuserテーブルを作成。  
 nullable=Falseはnullを許可しない設定。<br>
 
-##　テーブル作成
+## テーブル作成
 ---
 
 pythonシェル上でテーブル作成。仮想環境で、

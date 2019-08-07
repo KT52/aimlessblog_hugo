@@ -3,6 +3,9 @@ title: "VPSにCodeIgniter3を入れてURLからindex.phpを除去する"
 date: 2019-01-31
 tags: ["vps","codeigniter","php"]
 draft: false
+slug: ci3index
+adsenseTop: true
+adsenseBottom: true
 ---
 
 CodeIgniter利用者のほとんどが要らないと思っているURLにindex.phpがついてる問題。

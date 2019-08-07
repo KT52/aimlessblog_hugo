@@ -4,6 +4,8 @@ date: 2018-05-17
 categories: [GCP]
 tags: [Python,gae]
 slug: gaeflask
+adsenseTop: true
+adsenseBottom: true
 ---
 
 Google App EngineでFlaskを使う時のチュートリアル。  

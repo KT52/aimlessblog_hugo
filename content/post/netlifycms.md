@@ -5,6 +5,8 @@ modified: 2019-05-22
 categories: [Pelican]
 tags: [pelican,netlify,python]
 slug: netlifycms
+adsenseTop: true
+adsenseBottom: true
 ---
 ## はじめに
 - - -

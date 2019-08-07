@@ -4,6 +4,8 @@ date: 2019-07-17
 categories: [Python]
 tags: [python,flask]
 slug: flasksqlalchemy_wtfoms2
+adsenseTop: true
+adsenseBottom: true
 ---
 
 [前回](https://www.ravness.com/2019/07/flasksqlalchemy_wtfoms1/)のSQLAlchemyの基本を抑えたところで、Flask-WTFを使って

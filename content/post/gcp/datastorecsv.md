@@ -4,6 +4,8 @@ date: 2018-08-08
 categories: [GCP]
 tags: [Python,GAE]
 slug: datastorecsv
+adsenseTop: true
+adsenseBottom: true
 ---
 ## bulkloaderでアップロード
 ---

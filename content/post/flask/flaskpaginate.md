@@ -4,6 +4,8 @@ date: 2019-07-03
 categoies: [Python]
 tags: [python,flask]
 slug: flaskpaginate
+adsenseTop: true
+adsenseBottom: true
 ---
 
 [Flask Paginate](https://flask-paginate.readthedocs.io/en/latest/)はシンプルなFlaskのページネーション拡張で、
@@ -23,8 +25,7 @@ pip install -U flask-paginate
 
 例としてsqlite3を使用して、何らかのデータ一覧を表示する場合。
 
-```python
-
+```py
 #!  /usr/bin/env python
 from flask import Flask, request,render_template, g
 from flask_paginate import Pagination, get_page_parameter
@@ -59,14 +60,13 @@ def pic_view():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
 ```
 
 <br>
 page番号をgetして変数pageに代入。クエリーパラメータがない場合はデフォルトの1
 
 
-```python
+```py
 page = request.args.get(get_page_parameter(), type=int, default=1)
 ```
 

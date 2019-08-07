@@ -4,7 +4,8 @@ date: 2019-04-21
 categories: [GCP]
 tags: [vps,gce]
 slug: gceproxy
-related_posts: gceport
+adsenseTop: true
+adsenseBottom: true
 ---
 
 Google Compute Engine(GCE)でBasic認証付きのプロキシサーバーを立ててみた。

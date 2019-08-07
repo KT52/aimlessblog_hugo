@@ -5,6 +5,8 @@ categories: [Python]
 tags: [python, heroku]
 slug: herokulinenotify
 related_posts: linenotify, linescraping
+adsenseTop: true
+adsenseBottom: true
 ---
 
 スクレイピングした情報をLINE Notifyで通知するスクリプトは完成したので、  

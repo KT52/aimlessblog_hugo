@@ -4,6 +4,8 @@ date: 2018-08-15
 categories: [GCP]
 tags: [Python,GAE]
 slug: datastorecsv2
+adsenseTop: true
+adsenseBottom: true
 ---
 
 今回はGoogle Cloud Platform (GCP)のデータストアにbulkloaderを使わずにGoogle App Engine（GAE)経由でcsvファイルを一括でアップロードします。

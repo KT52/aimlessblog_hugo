@@ -4,6 +4,8 @@ date: 2019-03-19
 categories: [GCP]
 tags: [vps,gce]
 slug: gceport
+adsenseTop: true
+adsenseBottom: true
 ---
 
 Google Compute Engine(GCE)でSSH接続のポート番号がデフォルトの22番だと不正アクセスを試みようとするログがこんな感じでいっぱい残っているので、ポート番号の変更をしてみます。<br>

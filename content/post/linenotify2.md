@@ -5,6 +5,8 @@ categories: [Python]
 tags: [python]
 slug: linescraping
 related_posts: linenotify, herokulinenotify
+adsenseTop: true
+adsenseBottom: true
 ---
 
 ## はじめに

@@ -4,7 +4,8 @@ date: 2019-03-08
 categories: [GCP]
 tags: [vps,gce]
 slug: gcessh
-related_posts: gceport
+adsenseTop: true
+adsenseBottom: true
 ---
 
 ## PuTTYgenを入手する
