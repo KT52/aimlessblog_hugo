@@ -1,5 +1,7 @@
 .card,
-.highlight,
+.highlight{
+  font-size: 90% !important;
+}
 .highlight pre,
 .textarea,
 embed,

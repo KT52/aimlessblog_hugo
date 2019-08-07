@@ -6,7 +6,7 @@ theme="kiss"
 hasCJKLanguage = true
 enableInlineShortcodes = false
 pygmentsUseclasses = false
-pygmentsCodeFences = true
+pygmentsCodefences = true
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2019"
 
 [blackfriday]
