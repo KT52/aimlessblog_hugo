@@ -1,10 +1,9 @@
 ---
 title: Pythonの静的サイトジェネレーターPelicanでGitHub Pagesにブログを開設する
-date: 2018-03-30 12:00
+date: 2018-03-30
 category: Pelican
 tags: [Python,GitHub,Pelican]
 slug: pelicangithub
-modified: 2019-08-04
 adsenseTop: true
 adsenseBottom: true
 ---

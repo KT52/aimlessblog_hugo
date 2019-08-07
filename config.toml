@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "http://ravness.netlify.com"
 languageCode = "jp"
 title = "Aimless Blog"
 theme="kiss"
@@ -16,26 +16,6 @@ googleAnalytics = ""
 Paginate = 5
 summaryLength = 70
 
-[params.assets]
-customCSS = ["css/custom.css"]
-
-[taxonomies]
-tag ="tags"
-categories = "categories"
-
-[params]
-    description = "A minimal Hugo theme"
-    dateFormatToUse = "2006-01-02"
-    replaceGoogleFonts = "fonts.loli.net"
-    themeColor = "theme-base-0e"
-
-[permalinks]
-  post = "/:year/:month/:slug/"
-
-[params.sections_left]
-"/tags/" = "Tags"
-"/categories/" = "Categories"
-
 [params.info]
 adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
@@ -43,6 +23,21 @@ homeTitle = "Aimless Blog" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = false # Add copy button above code blocks
+
+[params.assets]
+customCSS = ["css/custom.css"]
+
+[taxonomies]
+tag ="tags"
+categories = "categories"
+
+[permalinks]
+post = "/:year/:month/:slug/"
+
+[params.sections_left]
+"/tags/" = "Tags"
+"/categories/" = "Categories"
+
 
 [params.social]
 twitter = ""
