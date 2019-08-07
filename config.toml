@@ -48,5 +48,8 @@ rss = "index.xml" # Add this to show RSS button in social.
 [params.social.config]
 platforms = ["github","facebook","twitter","instagram","email","rss"]
 
+[params]
+addThis = "ra-5b3b6c6367750cca"
+
 
 
