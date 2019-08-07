@@ -1,4 +1,4 @@
-baseURL = "http://ravness.netlify.com"
+baseURL = "https://ravness.netlify.com"
 languageCode = "jp"
 title = "Aimless Blog"
 theme="kiss"
