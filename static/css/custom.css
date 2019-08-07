@@ -7,11 +7,15 @@
 
 pre,
 pre code {
-    font-size: 100%;
   /*background-color: #f5f7fa;*/
   background-color: #040404;
   /*color: #42464c;*/
   color: #FFF;
+}
+
+.highlight pre {
+  font-size: 100%;
+  margin: 0;
 }
 
 /* Background */ .chroma { color: #ffffff; background-color: #111111 }
