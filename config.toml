@@ -1,4 +1,4 @@
-baseURL = "https://ravness.netlify.com"
+baseURL = "https://ravness.com"
 languageCode = "jp"
 title = "Aimless Blog"
 theme="kiss"
@@ -12,12 +12,12 @@ copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2019"
 [blackfriday]
 hrefTargetBlank = true
 
-googleAnalytics = ""
+googleAnalytics = "UA-67464867-3"
 Paginate = 5
 summaryLength = 70
 
 [params.info]
-adsense = "" # Adsense ID (ID only, without ca-pub-)
+adsense = "9772961045289102" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
 homeTitle = "Aimless Blog" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
