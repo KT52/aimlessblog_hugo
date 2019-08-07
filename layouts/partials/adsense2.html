@@ -1,0 +1,15 @@
+{{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- myad2 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-{{.Site.Params.Info.adsense}}" data-ad-slot="3938415902"
+  data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{{ else }}
+<div class="row">
+  <div class="col-md-11 col-md-offset-1 card">
+    <p>Adsense is unavailable while serving on localhost or 127.0.0.1</p>
+  </div>
+</div>
+{{ end }}
