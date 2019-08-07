@@ -25,7 +25,7 @@ related = true # Includes related articles at the bottom of the article
 codeCopy = false # Add copy button above code blocks
 
 [params.assets]
-customCSS = ["css/custom.css","css/syntax.css"]
+customCSS = ["css/custom.css"]
 
 [taxonomies]
 tag ="tags"
