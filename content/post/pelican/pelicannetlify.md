@@ -63,7 +63,7 @@ Freeプランでどれくらい利用できるのかというと、
 
 ## GitHubにpushする前にすること  
 
-Pelicanの使用法は[コチラ]() に書いたので省略。
+Pelicanの使用法は[コチラ](https://www.ravness.com/2018/03/pelicangithub/) に書いたので省略。
 
 - .gitignoreファイルを作成してoutputディレクトリをgitの管理から除外する。  
 
@@ -81,10 +81,8 @@ pip freeze > requirements.txt
 - pythonのヴァージョンを`runtime.txt`に記述。  
 デフォルトでは2.7を使用しているので違うヴァージョンを使用している場合は使用するヴァージョンを`runtime.txt`を作って記述する。
 
-```.txt
-
+```
 3.6.4
-
 ```
 
 ## GitHubにpush
