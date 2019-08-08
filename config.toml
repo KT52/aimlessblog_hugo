@@ -27,6 +27,9 @@ codeCopy = false # Add copy button above code blocks
 [params.assets]
 customCSS = ["css/custom.css"]
 
+[params.rss] # Adding this tag enables RSS feed
+includeContent = true # Includes whole content in rss
+
 [taxonomies]
 tag ="tags"
 categories = "categories"
