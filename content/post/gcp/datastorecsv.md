@@ -30,8 +30,8 @@ builtins:
 appcfg.py create_bulkloader_config --filename=bulkloader.yaml --application=アプリ名 .
 ```
 
-<br>このコマンドでbulkloader.yamlがアプリのディレクトリに生成される。
-生成されたbulkloader.yamlの`transformers:`以下を編集する。<br>
+このコマンドでbulkloader.yamlがアプリのディレクトリに生成される。
+生成されたbulkloader.yamlの`transformers:`以下を編集する。
 
 ```yaml
 
@@ -71,9 +71,9 @@ bango,ken,shiku,chouson
 appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 --filename=upload.csv --kind=address .
 ```
 
-<br>アプリ名とcsvファイルとkindは適宜変えてください。<br>
+アプリ名とcsvファイルとkindは適宜変えてください。
 
-これでアップロード出来るのですが、件数が多いとエラーが出てすべてを登録できなかった。<br>
+これでアップロード出来るのですが、件数が多いとエラーが出てすべてを登録できなかった。
 
 ```
 [ERROR   ] Error in WorkerThread-4: [Errno 10057] ソケットが接続されていないか、sendto 呼び出しを使ってデータグラム ソケットで送信するときにア
@@ -89,13 +89,13 @@ appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 -
 [INFO    ] Some entities not successfully transferred
 ```
 
-<br>[ここ](https://stackoverflow.com/questions/5466900/google-app-engine-bulkloader-unexpected-thread-death)を参考にして、`--batch_size=1000`と`--rps_limit=500`を追加<br>
+[ここ](https://stackoverflow.com/questions/5466900/google-app-engine-bulkloader-unexpected-thread-death)を参考にして、`--batch_size=1000`と`--rps_limit=500`を追加
 
 ```
 appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 --filename=upload.csv --kind=address --batch_size=1000 --rps_limit=500 .
 ```
 
-<br>
+
 
 ```
 [INFO    ] Connecting to xxxxxx.appspot.com/_ah/remote_api
@@ -110,15 +110,15 @@ appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 -
 [INFO    ] All entities successfully transferred
 ```
 
-<br>今度は3240件全て登録できました。2分かかるのは僕の使用する低スペPCが原因なのかどうかは分かりません（笑）
+今度は3240件全て登録できました。2分かかるのは僕の使用する低スペPCが原因なのかどうかは分かりません（笑）
 
-<br>ちなみに、データストアのデータをcsvファイルとしてダウンロードする場合は、<br>
+ちなみに、データストアのデータをcsvファイルとしてダウンロードする場合は、
 
 ```
 appcfg.py download_data --application=アプリ名 --config_file=bulkloader.yaml --filename=dl.csv --kind=address --batch_size=1000 --rps_limit=500 .
 ```
 
-で取得できます。`appcfg.py upload_data`を`appcfg.py download_data`に変更して、csvファイル名はディレクトリに同じファイルがあるとエラーが出るので適当な名前を付けるとcsvファイルをダウンロードできます。<br>
+で取得できます。`appcfg.py upload_data`を`appcfg.py download_data`に変更して、csvファイル名はディレクトリに同じファイルがあるとエラーが出るので適当な名前を付けるとcsvファイルをダウンロードできます。
 
 ```
 [INFO    ] Connecting to xxxxxx.appspot.com/_ah/remote_api
@@ -129,4 +129,4 @@ appcfg.py download_data --application=アプリ名 --config_file=bulkloader.yaml
 [INFO    ] 3240 entities (728547 bytes) transferred in 21.4 seconds
 ```
 
-21秒で完了。<br>
+21秒で完了。

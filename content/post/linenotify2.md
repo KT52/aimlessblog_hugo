@@ -4,7 +4,6 @@ date: 2018-12-02
 categories: [Python]
 tags: [python]
 slug: linescraping
-related_posts: linenotify, herokulinenotify
 adsenseTop: true
 adsenseBottom: true
 ---
@@ -37,8 +36,7 @@ adsenseBottom: true
 - BeautifulSoup
 - datetime
 
-```python
-
+```py3
 def main():
     today = datetime.datetime.today().strftime("%m/%d") #今日の日付を取得
     headers = {'User-Agent': 'Mozilla/5.0'}
@@ -97,7 +95,7 @@ if __name__ == '__main__':
 
 ```
 
-実行すると……<br>
+実行すると……  
 
 ![scraping](../../../images/linenotify3.jpg)
 

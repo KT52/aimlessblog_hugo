@@ -36,7 +36,7 @@ $datas = Data::paginate(20);
 
 ```
 
-これだけでページネーションを実装できます。<br>
+これだけでページネーションを実装できます。  
 
 ## GETパラメータとページネーション
 ---
@@ -48,8 +48,6 @@ GETメソッドで送信した情報を元に何らかのデータの一覧を�
 ２ページ目以降は`http://localhost:8000/catalog?page=2`  
 となってしまう。  
 ?genre=Nu+gazeが消えてしまっているのでこれを`http://localhost:8000/catalog?genre=Nu+gaze&page2`のようにしたい。
-
-<br><br>
 
 例えば、selectで選んだデータの一覧を表示するページを作成したい場合
 

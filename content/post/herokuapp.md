@@ -4,7 +4,6 @@ date: 2018-12-05
 categories: [Python]
 tags: [python, heroku]
 slug: herokulinenotify
-related_posts: linenotify, linescraping
 adsenseTop: true
 adsenseBottom: true
 ---
@@ -136,7 +135,7 @@ git push heroku master
 
 ```
 
-でデプロイ。デプロイの仕方はダッシュボードのDeployタブで確認できます。
+でデプロイ。デプロイの仕方はダッシュボードのDeployタブで確認・編集できます。
 
 ## トークンを環境変数に設定
 

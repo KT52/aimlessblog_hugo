@@ -8,15 +8,16 @@ adsenseTop: true
 adsenseBottom: true
 ---
 CodeIgniterでpaginationのサンプルを紹介するサイトはいっぱいあるけど、GETパラメータの受け渡しをしたページでページネーションを実装するサンプルが少なかったしうまく行かなかったので、自分のやり方を一例として紹介します。
-通常だと`yoursite.com/class/function/ページ` と表示されるのを `yoursite.com/class/function?q=ホニャララ&per_page=ページ`みたいなURLでページネーションを実装します。<br>
+通常だと`yoursite.com/class/function/ページ` と表示されるのを `yoursite.com/class/function?q=ホニャララ&per_page=ページ`みたいなURLでページネーションを実装します。  
 環境はPHP7.1 CodeIgniter Version 3.1.0　MariaDB　10.1.33
 
 ## 設定ファイルで設定する項目
 ---
 
 $config['base_url']、$config['total_rows']、$config['per_page']が必須項目。  
-`$config['reuse_query_string'] = TRUE;`で?q=ホニャララのクエリストリングを２ページ目以降に引き継ぐことができます。<br><br>
-これで試してみると今度はyoursite.com/class/ページfunction?q=ホニャララとなってしまいページネーションがうまく動作しないので、`$config['page_query_string'] = TRUE;`を設定する。<br>この設定で末尾に`&per_page=ページ`のクエリストリングがつくようになるので、`yoursite.com/class/function?q=ホニャララ&per_page=ページ`と表示されるようになります。
+`$config['reuse_query_string'] = TRUE;`で?q=ホニャララのクエリストリングを２ページ目以降に引き継ぐことができます。   
+   
+これで試してみると今度はyoursite.com/class/ページfunction?q=ホニャララとなってしまいページネーションがうまく動作しないので、`$config['page_query_string'] = TRUE;`を設定する。   この設定で末尾に`&per_page=ページ`のクエリストリングがつくようになるので、`yoursite.com/class/function?q=ホニャララ&per_page=ページ`と表示されるようになります。
 
 ページネーションの設定はこんな感じ
 
@@ -65,7 +66,7 @@ public function setPage($limit,$num)
 
 ```
 
-今回は1ページにつき12件取得するのでper_page=は2ページ目以降12,24と変化する。<br><br>
+今回は1ページにつき12件取得するのでper_page=は2ページ目以降12,24と変化する。      
 per_page=??は`$this->input->get('per_page')`で受け取ることができるのでこれを`$offset`に代入してsqlのオフセット値にする。
 `$limit`はsqlのリミット値と$config['per_page']の値。   
 
@@ -103,7 +104,7 @@ public function num()
 
 ```
 
-numメソッドはトータル件数を取得するメソッド、pageメソッドは取得するデータ。<br>
+numメソッドはトータル件数を取得するメソッド、pageメソッドは取得するデータ。   
 クエリの書き方は人それぞれ違うけどリミット句とオフセット句は絶対必要なので忘れないでね。
 
 ## ビュー
@@ -125,17 +126,17 @@ numメソッドはトータル件数を取得するメソッド、pageメソッ�
 ## ページ番号について
 ---
 
-通常はページ番号がオフセット値になっているので2ページ目以降が12，24，36のように表示されます。<br>
-これを2,3,4と普通のページ番号で表示させたい場合は、<br>
-`$config['use_page_numbers'] = TRUE;`をページネーションの設定に加えて、<br>
-コントローラーの`$offset = $this->input->get('per_page');`を<br>
+通常はページ番号がオフセット値になっているので2ページ目以降が12，24，36のように表示されます。   
+これを2,3,4と普通のページ番号で表示させたい場合は、   
+`$config['use_page_numbers'] = TRUE;`をページネーションの設定に加えて、   
+コントローラーの`$offset = $this->input->get('per_page');`を   
 
 ```php
 <?php
 $offset = $this->input->get('per_page') ? ($this->input->get('per_page')-1)*$limit : 0 ;
 ```
-に変更。<br>
-これで1ページ目はper_pageがないので0を返し、2ページはper_pageが2なので(2-1)*12で12。そのあとは24、36とオフセット値がセットされます。<br><br>
+に変更。   
+これで1ページ目はper_pageがないので0を返し、2ページはper_pageが2なので(2-1)*12で12。そのあとは24、36とオフセット値がセットされます。      
 
-per_page=をpage=と表示させたい場合は`$config['query_string_segment'] = 'page';`を設定して<br>
+per_page=をpage=と表示させたい場合は`$config['query_string_segment'] = 'page';`を設定して   
 コントローラーの$offset = $this->input->get('per_page')を$offset = $this->input->get('page')に変更。

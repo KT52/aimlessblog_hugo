@@ -8,7 +8,7 @@ adsenseTop: true
 adsenseBottom: true
 ---
 
-Google Compute Engine(GCE)でSSH接続のポート番号がデフォルトの22番だと不正アクセスを試みようとするログがこんな感じでいっぱい残っているので、ポート番号の変更をしてみます。<br>
+Google Compute Engine(GCE)でSSH接続のポート番号がデフォルトの22番だと不正アクセスを試みようとするログがこんな感じでいっぱい残っているので、ポート番号の変更をしてみます。
 
 ![不正アクセス](../../../images/gce_access.jpg)
 
@@ -24,14 +24,14 @@ GCPのコンソールページのナビゲーションメニューから、`VPC�
 -  ソース IP の範囲→0.0.0.0/0
 -  指定したプロトコルとポート→tcpにチェックしてポート番号を適当に
 
-他は初期設定のままでOK。<br>
+他は初期設定のままでOK。
 
 ![不正アクセス](../../../images/firewallrule.jpg)  
 
 ## VMインスタンスにネットワークタグを設定
 ---
 
-GCPのコンソールページのナビゲーションメニューから、`Compute Engine`→`VMインスタンス`に移動。使用するインスタンス内の画面上部にある編集をクリックして、ネットワークタグにファイアウォールルールで作成したターゲットタグを入力してenterキー。画面下部の保存で設定の保存<br>
+GCPのコンソールページのナビゲーションメニューから、`Compute Engine`→`VMインスタンス`に移動。使用するインスタンス内の画面上部にある編集をクリックして、ネットワークタグにファイアウォールルールで作成したターゲットタグを入力してenterキー。画面下部の保存で設定の保存。
 
 ## SELinux と iptablesの無効化
 ---
@@ -42,7 +42,7 @@ CentOSのSELinux と iptablesを無効化します。
 systemctl disable firewalld
 ```
 
-<br>
+
 #### /etc/selinux/configを編集
 
 ```
@@ -67,7 +67,7 @@ systemctl is-enabled firewalld
 getenforce
 ```
 
-でどちらも`disable`になっていればOK。<br>
+でどちらも`disable`になっていればOK。
 
 ## ポート番号を変更
 ---
@@ -75,29 +75,37 @@ getenforce
 sshd_configに使用するポート番号を記入
 
 ```
-
 cd /etc/ssh
-cp sshd_config sshd_config_old 念のためsshd_configをバックアップ
+```
+```
+cp sshd_config sshd_config_old  念のためsshd_configをバックアップ
+```
+```
 vim sshd_config
+```
+```
 port 44444
 ```
 
 sshdを再起動
-`systemctl restart sshd` <br>
+`systemctl restart sshd`
 
 ## 実際に接続
 ---
 
-まずはコンソールからSSHで`ブラウザウィンドウで開く`をクリック。  
-![ssh_fail](../../../images/gce_ssh_fail.jpg)<br>
+まずはコンソールからSSHで`ブラウザウィンドウで開く`をクリック。
 
-<br>ポート22で接続できないことを確認<br>
+![ssh_fail](../../../images/gce_ssh_fail.jpg)
+
+ポート22で接続できないことを確認
+
 ![port22_fail](../../../images/gce_port22_fail.jpg)  
 
 次は`ブラウザ ウィンドウでカスタムポートを開く`をクリックしてポート番号を入力して接続できればポート番号の変更は成功です。
 
 ターミナルソフトで接続する場合もポート番号を22から変更して接続。  
-<br>Google Cloud SDK shellから接続する場合は
+Google Cloud SDK shellから接続する場合は
+
 ```
 gcloud compute ssh インスタンス名 --ssh-flag="-P ポート番号"
 ```

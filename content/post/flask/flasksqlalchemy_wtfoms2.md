@@ -153,7 +153,7 @@ if __name__ == "__main__":
 
 とりあえずなんの装飾も施してないページができました。
 
-![form1](../../../images/wtf1.png)<br>
+![form1](../../../images/wtf1.png)
 
 ## レコード削除とレコード追加機能を実装
 ---
@@ -195,19 +195,24 @@ def index():
 {% endif %}
 ```
 
-<br>
-
 ## 実際に動かしてみる
 ---
 
 **insert**<br>
-![form2](../../../images/wtf2.gif)<br><br>
-**空白でボタンを押すと**<br>
-![form2-2](../../../images/wtf2-2.gif)<br><br>
-**delete**<br><br>
-![form3](../../../images/wtf3.gif)<br><br>
-**10文字以上の名前を登録すると**<br>
-![form4](../../../images/wtf4.gif)<br><br>
+![form2](../../../images/wtf2.gif)  
+
+**空白でボタンを押すと**
+
+![form2-2](../../../images/wtf2-2.gif)
+
+**delete**
+
+![form3](../../../images/wtf3.gif)
+
+**10文字以上の名前を登録すると**
+
+![form4](../../../images/wtf4.gif)
+
 
 ## 更新
 ---
@@ -266,5 +271,6 @@ def index():
 
 ゴチャゴチャしてきたので更新機能だけのページに変更。
 
-![form5](../../../images/wtf5.gif)<br><br>
+![form5](../../../images/wtf5.gif)
+
 見た目変化ないけど更新成功しています。

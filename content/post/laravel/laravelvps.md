@@ -16,13 +16,14 @@ VPSやApacheのインストール等は[ネコでもわかる！さくらのVPS�
 ## composerのインストール
 ---
 
-<br>
+
 
 ```
 curl https://getcomposer.org/installer | php
 ```
 
-composerコマンドをどこでも使えるようにするために`composer.phar`を`/usr/local/bin/`に移動<br>
+composerコマンドをどこでも使えるようにするために`composer.phar`を`/usr/local/bin/`に移動
+
 ```
 mv composer.phar /usr/local/bin/composer
 ```
@@ -39,7 +40,7 @@ composerとコマンドを打って下記のように表示されれば成功。
 Composer version 1.8.5 2019-04-09 17:46:47
 
 ```
-<br>
+
 
 ## Laravelをインストール
 ---
@@ -49,7 +50,7 @@ Composer version 1.8.5 2019-04-09 17:46:47
 ```
 composer global require "laravel/installer"
 ```
-<br>
+
 
 #### Laravelのプロジェクト作成
 
@@ -59,12 +60,12 @@ composer global require "laravel/installer"
 composer create-project --prefer-dist laravel/laravel プロジェクト名
 ```
 
-でインストール。<br>
+でインストール。
 
 ## ドキュメントルートの変更
 ---
 
-Laravelを使用するにはpublicディレクトリをドキュメントルートにする必要があるのでその設定を行います。<br><br>
+Laravelを使用するにはpublicディレクトリをドキュメントルートにする必要があるのでその設定を行います。
 
 #### httpd.confの設定（Apache)
 
@@ -88,7 +89,7 @@ ServerName www.example.com
 systemctl restart httpd
 ```
 
-でApacheを再起動。<br><br>
+でApacheを再起動。
 
 
 #### default.confの設定(nginx)
@@ -147,7 +148,7 @@ location / {
 
 ```
 
-間違いがないか`nginx -t` で確認。問題がなければ`sudo systemctl restart nginx`でnginxを再起動。<br><br>
+間違いがないか`nginx -t` で確認。問題がなければ`sudo systemctl restart nginx`でnginxを再起動。
 
 ## パーミッションの変更
 ---

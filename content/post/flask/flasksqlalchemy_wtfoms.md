@@ -17,13 +17,13 @@ Flaskはローカルで使用してたのでデータベースはSQLを直に書
 pip install flask-sqlalchemy
 ```
 
-SQLAlchemyがインストールされていない場合はSQLAlchemyも一緒にインストールされる。<br>
+SQLAlchemyがインストールされていない場合はSQLAlchemyも一緒にインストールされる。
 
 ## アプリ作成
 ---
 
 とりあえず触れてみるだけなのでtest.pyとtemplatesディレクトリを作成するだけの環境で作業します。  
-実際にアプリを作成する場合はconfigやmodelを別ファイルに分けたほうがいいでしょう。<br>
+実際にアプリを作成する場合はconfigやmodelを別ファイルに分けたほうがいいでしょう。
 
 ### 環境設定とモデル定義
 
@@ -55,7 +55,7 @@ class User(db.Model):
 ```
 
 データベースはSQLite3を使用します。id（プライマリーキー、整数型）,username,jobの3つのカラムを持ったuserテーブルを作成。  
-nullable=Falseはnullを許可しない設定。<br>
+nullable=Falseはnullを許可しない設定。
 
 ## テーブル作成
 ---
@@ -67,7 +67,7 @@ pythonシェル上でテーブル作成。仮想環境で、
 >>> db.create_all()
 ```
 
-でtest.dbとモデル定義したuserテーブルが作成される。<br>
+でtest.dbとモデル定義したuserテーブルが作成される。
 
 ## Insert
 ---
@@ -83,7 +83,7 @@ pythonシェル上でテーブル作成。仮想環境で、
 >>> db.session.commit()
 ```
 
-db.session.add()でセッションに追加してcommit()でセッションをコミットするという流れでデータベースに挿入される。<br>
+db.session.add()でセッションに追加してcommit()でセッションをコミットするという流れでデータベースに挿入される。
 
 ## Query
 ---
@@ -113,8 +113,6 @@ get()でプライマリーキーを元に呼び出すことができる。
 <User 1,'Yamada','Fighter'>
 ```
 
-<br>
-
 ## Delete
 ---
 
@@ -123,7 +121,7 @@ get()でプライマリーキーを元に呼び出すことができる。
 >>> db.session.delete(user)
 >>> db.session.commit()
 ```
-<br>
+
 
 ## Update
 ---

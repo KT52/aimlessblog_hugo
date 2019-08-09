@@ -39,7 +39,8 @@ acl password proxy_auth REQUIRED
 
 ```
 
-を追加。<br>`/etc/squid/passwd`が後で設定するベーシック認証のパスワードを書き込むファイルの場所。<br>
+を追加。  
+`/etc/squid/passwd`が後で設定するベーシック認証のパスワードを書き込むファイルの場所。  
 
 63行目付近の
 
@@ -58,8 +59,7 @@ http_access deny all
 
 `http_access allow password`でパスワード認証を許可する
 
-<br>
-
+   
 デフォルトのポート番号3128を他の番号に変更するので67行目付近の`http_port 3128`をコメントアウトして新しいポート番号を追加。
 
 ```conf

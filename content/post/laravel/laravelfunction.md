@@ -32,7 +32,7 @@ class My_func
 }
 
 ```
-<br>
+
 
 ## エイリアスの登録
 ---
@@ -46,7 +46,7 @@ class My_func
     'My_func' => App\Lib\My_func::class,
   ],
 ```
-<br>
+
 
 ## コントローラーで使う
 ---
@@ -72,10 +72,10 @@ class YourController extends Controller
 }
 
 ```
-<br>
+
 
 ## bladeテンプレートで使う
 ---
 
 エイリアスに登録しているならbladeテンプレートで使う場合も`{{My_func::xxx()}}`で呼び出し可能。  
-ifやforeachでも`@foreach (My_func::xxx() as $zzz) {{$zzz}} @endforeach`のように使用できます。<br>
+ifやforeachでも`@foreach (My_func::xxx() as $zzz) {{$zzz}} @endforeach`のように使用できます。

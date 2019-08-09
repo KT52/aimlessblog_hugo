@@ -22,11 +22,12 @@ IFTTTやGitHubと連携して色々な通知を受け取ることができるweb
 [https://notify-bot.line.me/my/](https://notify-bot.line.me/my/)の`トークンを発行する`をクリック。
 ![notifytop](../../../images/linenotify.jpg)
 
-トークン名を記入して`1:1でLINE Notifyから通知を受け取る`を選択して`発行する`を押す。<br><br>
+トークン名を記入して`1:1でLINE Notifyから通知を受け取る`を選択して`発行する`を押す。
 
 ![tokenname](../../../images/linenotify2.jpg)
 
-トークンが発行されたのでコピーしてメモ帳などに一時的に保管しておきましょう。<br><br>
+トークンが発行されたのでコピーしてメモ帳などに一時的に保管しておきましょう。
+
 ![token](../../../images/linetoken.jpg)
 
 ## テスト送信
@@ -54,7 +55,7 @@ if __name__ == '__main__':
 
 ```
 
-line.pyで保存して実行`py -3 line.py`<br>
+line.pyで保存して実行`py -3 line.py`
 
 ![linetest](../../../images/linetest.jpg)
 

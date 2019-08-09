@@ -18,8 +18,6 @@ cssフレームワークのBootstrapとfoundationに対応しています。
 pip install -U flask-paginate
 ```
 
-<br>
-
 ## 使い方
 ---
 
@@ -62,7 +60,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-<br>
+
 page番号をgetして変数pageに代入。クエリーパラメータがない場合はデフォルトの1
 
 
@@ -70,7 +68,7 @@ page番号をgetして変数pageに代入。クエリーパラメータがない
 page = request.args.get(get_page_parameter(), type=int, default=1)
 ```
 
-<br>
+
 Pagination()でページネーションに必要なパラメータを記載。
 
 ```python
@@ -83,7 +81,7 @@ pagination = Pagination(page=page, total=len(result),  per_page=10, css_framewor
 - per_page: 1ページあたりのレコード数。今回は10件取得。
 - css_framework: 使用するCSSフレームワーク
 
-<br>
+
 レコードの中の何件目から何件目まで取得するかをスライスで取得。
 
 ```python
@@ -91,8 +89,9 @@ pagination = Pagination(page=page, total=len(result),  per_page=10, css_framewor
 ```
 
 これを設定しないと全ページ全レコードが表示されてしまう。  
-公式サイトにオフセットの設定は書いてなかったので少しハマったところ。<br><br>
-参考: [どのように１ページごとに表示させるアイテム数とページネータをコントロールすればいいでしょうか？](https://ja.stackoverflow.com/questions/44885/%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%EF%BC%91%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%94%E3%81%A8%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E6%95%B0%E3%81%A8%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%BF%E3%82%92%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8C%E3%81%B0%E3%81%84%E3%81%84%E3%81%8B)<br>
+公式サイトにオフセットの設定は書いてなかったので少しハマったところ。  
+
+参考: [どのように１ページごとに表示させるアイテム数とページネータをコントロールすればいいでしょうか？](https://ja.stackoverflow.com/questions/44885/%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%EF%BC%91%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%94%E3%81%A8%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E6%95%B0%E3%81%A8%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%BF%E3%82%92%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8C%E3%81%B0%E3%81%84%E3%81%84%E3%81%8B)
 
 ## ビュー
 ---
@@ -119,7 +118,7 @@ pagination = Pagination(page=page, total=len(result),  per_page=10, css_framewor
 {{ pagination.links }}
 ```
 
-<br>
+
 `{{ pagination.links }}`でページネーションが作成される。  
 `{{ pagination.info }}`は"displaying 21 - 30 records in total 163"みたいなインフォメーション、なくてもいい。
 
