@@ -11,7 +11,7 @@ adsenseBottom: true
 ## PelicanをGAEで使う
 ---
 
-Google App Engine（以下GAE）は静的サイトもホスティングできるので、Pythonの静的サイトジェネレーターPelicanを使ったブログサイトを作ってみた。<br>
+Google App Engine（以下GAE）は静的サイトもホスティングできるので、Pythonの静的サイトジェネレーターPelicanを使ったブログサイトを作ってみた。
 なお、GAEの利用法（Google Cloud SDKとか)は省きます。Pelicanの使用法は[前に書いた記事](https://www.ravness.com/2018/03/pelicangithub/)を参照してください。
 
 ## GAEの新しいプロジェクトを作成する
@@ -32,7 +32,7 @@ myblog/
     pelicanconf.py
 ```  
 
-  他にもファイルがプロジェクトのディレクトリにありますが、ブログ作成に最低限必要なのはこれだけ。<br>
+  他にもファイルがプロジェクトのディレクトリにありますが、ブログ作成に最低限必要なのはこれだけ。
 
 ## app.yamlの設定
 ---
@@ -60,7 +60,7 @@ contentディレクトリに書いた記事を保存したら、`pelican content
 ## ローカルサーバーで確認
 ---
 
-`dev_appserver.py .`でサーバーを立ち上げたら、ブラウザでlocalhost:8080にアクセス。ブログが表示されたら成功。<br>
+`dev_appserver.py .`でサーバーを立ち上げたら、ブラウザでlocalhost:8080にアクセス。ブログが表示されたら成功。
 
 ## デプロイ
 ---
@@ -76,7 +76,7 @@ skip_files:
 ## サイトにアクセス
 ---
 
-デプロイしたら`https://プロジェクト名.appspot.comにアクセス`  <br>
+デプロイしたら`https://プロジェクト名.appspot.comにアクセス`  
 
 ## 補足
 ---
@@ -116,7 +116,7 @@ MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 
 ## GAEを無料で運用するための設定
 ---
-<br>
+
 GAEはスタンダード環境での無料枠が大きいので月間数万PVくらいまでなら無料枠で運営できる…はず。  
 しかし何も設定しないとアクセス過多でインスタンスが複数立ち上がって無料で運用することができなくなる可能性があるので`app.yaml`でこれを制御します。  
 
@@ -128,12 +128,12 @@ automatic_scaling:
   min_pending_latency: 3000ms
   max_pending_latency: automatic
 ```
-インスタンスは一番性能が低いが28インスタンス時間が無料のf1-micro、`max_idle_instances: 1`でidle状態にあるインスタンスの最大値を1にして複数インスタンスが起動しないようにする。<br><br>
+インスタンスは一番性能が低いが28インスタンス時間が無料のf1-micro、`max_idle_instances: 1`でidle状態にあるインスタンスの最大値を1にして複数インスタンスが起動しないようにする。
 
 ## 参考サイト
 ---
-[Google App Engine で静的ウェブサイトをホストする](https://cloud.google.com/appengine/docs/standard/php/getting-started/hosting-a-static-website?hl=ja)<br>
-[Pelican](http://docs.getpelican.com/)<br>
-[Pelican Hosting on AppEngine](http://www.craigjperry.com/pelican-hosting-on-appengine.html)<br>
+[Google App Engine で静的ウェブサイトをホストする](https://cloud.google.com/appengine/docs/standard/php/getting-started/hosting-a-static-website?hl=ja)  
+[Pelican](http://docs.getpelican.com/)  
+[Pelican Hosting on AppEngine](http://www.craigjperry.com/pelican-hosting-on-appengine.html)  
 [Google App Engineを無料で運用する方法（2018年版）](http://koni.hateblo.jp/entry/2016/01/06/130613)
 

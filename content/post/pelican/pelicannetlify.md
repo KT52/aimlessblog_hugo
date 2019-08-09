@@ -1,7 +1,7 @@
 ---
 title: NetlifyにPelicanを使用して静的コンテンツをホスティングする
 date: 2018-06-07
-category: Pelican
+categories: Pelican
 tags: [netlify,python,pelican]
 slug: pelicannetlify
 adsenseTop: true

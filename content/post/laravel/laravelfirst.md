@@ -13,36 +13,35 @@ adsenseBottom: true
 XdomainでPHP/mysqlサーバーが無料で使えるので久々にPHPを使ってみようと思い、今一番人気のPHPフレームワークLaravelを使ってみた。PHPフレームワークはCodeigniterを以前使用したことがあります。  
 公式サイト及び日本語翻訳サイトからベーシックな部分を備忘録的にまとめてみた。
 
-[公式サイト](https://laravel.com){:target="_blank"}  
-[日本語訳サイト](https://readouble.com/){:target="_blank"}
+[公式サイト](https://laravel.com)  
+[日本語訳サイト](https://readouble.com/)  
 
-<br>**環境**:Laravel5.6 Windows10 Xampp php7.2.6 
+**環境**:Laravel5.6 Windows10 Xampp php7.2.6  
 
 ### Composerをインストール
 ---
 
-[Composer](https://getcomposer.org/){:target="_blank"}のダウンロードページから`Composer-Setup.exe`をダウンロードしてインストール。
+[Composer](https://getcomposer.org/)  のダウンロードページから`Composer-Setup.exe`をダウンロードしてインストール。
 使用するPHPを指定するときは、XAMPPの中のPHP`C:\xampp\php\php.exe`を指定する。
-<br>
 
 ### Laravelをインストール
 ---
 
-<br>
-`composer global require "laravel/installer"`でLaravelインストーラーをインストール。<br><br>
+  
+`composer global require "laravel/installer"`でLaravelインストーラーをインストール。    
 
 ### プロジェクトの作成
 ---
 
-<br>
+  
 `laravel new プロジェクト名（ここではmyapp）`と打つとmyappというディレクトリが作成されて、そこに必要とするパッケージが全部揃った、Laravelがインストールされる。  
 myappディレクトリに移動して`php artisan serve`でローカルサーバーを起動してブラウザで`http://localhost:8000`にアクセスすると下の画面が表示される。  
-![laravel](../../../images/laraveltop.png)  <br><br>
+![laravel](../../../images/laraveltop.png)      
 
 ### データベースの設定
 ---
 
-<br>
+  
 `.env`ファイルのデータベース名・ユーザー名・パスワードを変える。xamppはMariaDBが使用されてるけどmysqlのままでOK。
 
 ```env
@@ -54,18 +53,18 @@ DB_USERNAME=taro
 DB_PASSWORD=1234
 
 ```
-<br><br>
+    
 
 ### Eloquent ORM
 ---
 
-Eloquent ORMというO/Rマッパーを使用するにはモデルを作成する必要がある。<br><br>
+Eloquent ORMというO/Rマッパーを使用するにはモデルを作成する必要がある。    
 
 
 ### モデルの作成
 ---
 
-<br>
+  
 `php artisan make:model クラス名（ここではBooklist）`と打つとappディレクトリにBooklist.phpが作成される。
 マイグレーションに必要なファイルも一緒に生成する場合は`php artisan make:model Booklist -m`。
 
@@ -84,12 +83,12 @@ class Booklist extends Model
 
 ```
 
-Booklistクラスは空ですが、この場合はクラス名を複数形(booklists)の「スネークケース」にしたものがテーブル名として使用される。<br><br>
+Booklistクラスは空ですが、この場合はクラス名を複数形(booklists)の「スネークケース」にしたものがテーブル名として使用される。    
 
 ### マイグレーション
 ---
 
-<br>
+  
 `php artisan make:migration create_booklists_table --create=booklists`で`database/migrations`ディレクトリにファイルが生成される。createオプションでテーブル名を指定。
 上記のモデルの作成時に-mオプションで作成した場合は既にマイグレーションファイルが生成されている。  
 ファイル名にはマイグレーションの実行順をフレームワークに知らせるため、名前にタイムスタンプが含まれている。
@@ -135,12 +134,12 @@ class CreateBooklistsTable extends Migration
 
 ```
 
-`php artisan migrate`でマイグレーションを実行。MySQLにBooklistsテーブルが作成される。<br><br>
+`php artisan migrate`でマイグレーションを実行。MySQLにBooklistsテーブルが作成される。    
 
 ### マイグレーションを実行して、SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes のエラーが出る場合
 ---
 
-<br>
+  
 Laravelは絵文字の保存をサポートしているのでutf8mb4を使用しています。なので、バージョン5.7.7より古いMySQLや、バージョン10.2.2より古いMariaDBを使用している場合、デフォルトの文字列長255文字だと767バイトを超えてしまうので、   `app\Providers\AppServiceProvider.php`を開き、`use Illuminate\Support\Facades\Schema;`と。` Schema::defaultStringLength(191);`を追加する。
 
 
@@ -177,12 +176,12 @@ class AppServiceProvider extends ServiceProvider
 }
 
 ```
-<br>
+  
 
 ### ルーティング
 ---
 
-<br>
+  
 ルートは`routes/web.php`で定義する。
 
 ```php
@@ -192,11 +191,11 @@ Route::get('/', function () {
 });
 ```
 
-`php artisan serve`でローカルサーバーを起動して、`http://localhost:8000` にアクセスするとHello Worldが表示される。<br>
+`php artisan serve`でローカルサーバーを起動して、`http://localhost:8000` にアクセスするとHello Worldが表示される。  
 
 ### ビュー
 
-<br>
+  
 ビューは`resources/views`ディレクトリに作成する。Bladeテンプレートを使用しているので、***.blade.phpで保存。  
 hello.blade.phpで保存しているなら`view('hello')`。  
 `resources/views/about`のようなサブディレクトリを作成した場合は、`view(about.テンプレートファイル)`
@@ -217,12 +216,12 @@ Route::get('/hello', function () {
 
 ```
 
-`http://localhost:8000/hello`で表示される。<br>
+`http://localhost:8000/hello`で表示される。  
 
 
 ### コントローラー
 
-<br>
+  
 ルートファイルに全リクエストの処理を書いても問題ないけど、分離して管理したいときはコントローラクラスを使用する。  
 コントローラーの作成は`php artisan make:controller コントローラ名`で、app\Http\Controllers\に作成される。
 
@@ -263,7 +262,7 @@ class TestController extends Controller
 ```
 
 使用するモデルを定義`use app/Booklist;`して、  
-ファンクション'alllist'にクエリとビューを記述。    
+ファンクション'alllist'にクエリとビューを記述。  
 ルートファイルは
 
 ```php
@@ -272,7 +271,7 @@ Route::get('/alllist', 'TestController@alllist');
 
 ```
 
-コントローラ名＠ファンクション名でメソッドが実行される。<br><br>
+コントローラ名＠ファンクション名でメソッドが実行される。
 
 ### おわりに
 

@@ -88,8 +88,7 @@ Gmailを使う場合は[Googleアカウント](https://myaccount.google.com/)か
 - このパスワードを.envのMAIL_PASSWORD=に記入する
 
 アプリパスワードを使用すると、2段階認証プロセスに対応していない端末上のアプリからGoogleアカウントにログインできるようになります。  
-これでLaravelからGmailを利用して送信できるようになります。    
-<br>
----
+これでLaravelからGmailを利用して送信できるようになります。  
+
 参考サイト：[stackoverflow Laravel SMTP driver with TLS encryption
 ](https://stackoverflow.com/questions/30714229/laravel-smtp-driver-with-tls-encryption)

@@ -107,9 +107,9 @@ def test():
 
 ### デプロイ
 
-`gcloud app deploy app.yaml --project プロジェクト名`でデプロイ。<br>
+`gcloud app deploy app.yaml --project プロジェクト名`でデプロイ。  
 `https://プロジェクト名.appspot.com/`にアクセスして"Hello World!"が表示されていることを確認。
 
-参考サイト<br>
-[Getting Started with Flask on App Engine Standard Environment](https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env)<br>
+参考サイト:  
+[Getting Started with Flask on App Engine Standard Environment](https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env)  
 サードパーティライブラリの使い方:[Using third-party libraries](https://cloud.google.com/appengine/docs/standard/python/tools/using-libraries-python-27?hl=ja)

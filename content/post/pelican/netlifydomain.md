@@ -13,49 +13,55 @@ Netlifyで独自ドメインを設定してみた
 ### ドメインを取得する
 ---
 
-![Xdomain](../../../images/xdomaintop.jpg)  <br>
+![Xdomain](../../../images/xdomaintop.jpg)  
 
-他サイトのドメインはムームードメインを利用していますが、今回はドメインをXdomain<a href="https://px.a8.net/svt/ejp?a8mat=356RAJ+GF7GHE+CO4+15PEXE" target="_blank" rel="nofollow">（リンク）</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=356RAJ+GF7GHE+CO4+15PEXE" alt="">で取得することにしました。<br><br>
+他サイトのドメインはムームードメインを利用していますが、今回はドメインをXdomain<a href="https://px.a8.net/svt/ejp?a8mat=356RAJ+GF7GHE+CO4+15PEXE" target="_blank" rel="nofollow">（リンク）</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=356RAJ+GF7GHE+CO4+15PEXE" alt="">で取得することにしました。  
 
-`ドメインの検索`→`会員登録`→`お支払い情報の入力`→`内容の確認・規約への同意`→`申込み完了`と進んで10～20分で簡単にドメインを取得できます。（クレカ払いの場合）<br>
+`ドメインの検索`→`会員登録`→`お支払い情報の入力`→`内容の確認・規約への同意`→`申込み完了`と進んで10～20分で簡単にドメインを取得できます。（クレカ払いの場合）  
 
 ### Netlifyにカスタムドメインを登録
 ---
 
 Domain Setting→Add custom domainと進んで取得したドメインを入力`(www).xxx.com` を入力して`Verify`をクリック  
-Netlifyはwww付きのドメインをプライマリードメインとして推奨しているようです。なのでwww付きで登録しました。<br>
+Netlifyはwww付きのドメインをプライマリードメインとして推奨しているようです。なのでwww付きで登録しました。  
 
 ### DNS設定
 ---
 
 `Verify`をクリックした後はこんな画面になるので`Check DNS Configuration`をクリック。
 
-![dns](../../../images/checkdns.jpg)<br>
+![dns](../../../images/checkdns.jpg)  
 
-すると、CNAMEをエックスドメインで編集するかNetlify DNSを使うか表示されるので`Set up Netlify DNS~~`をクリック。  
-ベストパフォーマンスを得るにはNetlify DNSを必ず使ってねと書いてありますね。ALIASやCNAMEも気にしないでね、とも。<br>
+すると、CNAMEをDNSプロバイダー（エックスドメイン）で編集しなさいみたいに表示されますが、エックスドメインのネームサーバーを使用しない場合はDNSレコードを編集できないので、`Set up Netlify DNS`をクリック。  
+Netlifyの[ドキュメント](https://www.netlify.com/docs/custom-domains/)には
+
+> Unless your DNS provider supports CNAME flattening, ANAME or ALIAS records for root domains, we strongly recommend setting the www subdomain as your primary domain.  
+DNSプロバイダーがルートドメインのCNAMEフラット化、ANAMEまたはALIASレコードをサポートしていない限り、wwwサブドメインをプライマリドメインとして設定することを強くお勧めします。
+
+と書いてあるのでプライマリードメインをwww付きのドメインにした僕の場合はCNAMEの編集をする必要はありません。  
+下の画像の"Use Netlify DNS"のところにも、ベストパフォーマンスを得るにはNetlify DNSを必ず使ってねと書いてありますね。ALIASやCNAMEも気にしないでね、とも。  
 
 ![dnsconf](../../../images/dnsconf3.jpg)
 
-<br>
+  
 wwwなしのドメインでAレコードをドメインプロバイダーのDNSレコードに記述するやり方だとNetlifyの強力なCDNを利用することができないので注意。
-<br>
+  
 
 ![dns](../../../images/dnsconf1.jpg)
 
-「Netlify 独自ドメイン」でググるとAレコードを記述する方法ばかりがヒットしたので最初はその方法で設定していましたが、Aレコードを使用するとNetlifyの恩恵が得られなさそうなのでwwwの使用に抵抗がなければwwwありでNetlify DNSを利用しましょう。<br>
+「Netlify 独自ドメイン」でググるとAレコードを記述する方法ばかりがヒットしたので最初はその方法で設定していましたが、Aレコードを使用するとNetlifyの恩恵が得られなさそうなのでwwwの使用に抵抗がなければwwwありでNetlify DNSを利用しましょう。  
 
 ### ネームサーバーの変更
 ---
-`Set up Netlify DNS~~`をクリックして進めていくとDNSレコードをNetlifyが勝手に設定してくれて、更に進むと4つのネームサーバーが表示されるのでコピーしてエックスドメインの「ネームサーバーの確認・変更」から４つのネームサーバーをペーストする。<br><br>
+`Set up Netlify DNS~~`をクリックして進めていくとDNSレコードをNetlifyが勝手に設定してくれて、更に進むと4つのネームサーバーが表示されるのでコピーしてエックスドメインの「ネームサーバーの確認・変更」から４つのネームサーバーをペーストする。    
 
 
 ![nameserver](../../../images/nameservers.jpg)
 
-<br>DNSが浸透すると独自ドメインでアクセスできるようになります。
+  DNSが浸透すると独自ドメインでアクセスできるようになります。
 
 
-![domainset](../../../images/domainset.jpg)<br>
+![domainset](../../../images/domainset.jpg)  
 
 
 ### Let’s Encryptの証明書を取得
@@ -74,7 +80,7 @@ Force HTTPSをクリックしてhttpでのアクセスをhttpsにリダイレク
 ### DNS 設定 （2019年3月13日追記）
 ---
 
-Netlify DNSを使用してDNSレコードを自動でセッティングした後にMXレコード等のレコードを追加する場合は、<br>`Domain Settings`からCustom Domainsの`Netlify DNS`をクリックして設定ページに移動、`Add new record`で追加できます。
+Netlify DNSを使用してDNSレコードを自動でセッティングした後にMXレコード等のレコードを追加する場合は、  `Domain Settings`からCustom Domainsの`Netlify DNS`をクリックして設定ページに移動、`Add new record`で追加できます。
 
 ### 感想
 ---
