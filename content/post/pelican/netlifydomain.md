@@ -24,8 +24,7 @@ Netlifyで独自ドメインを設定してみた
 
 Domain Setting→Add custom domainと進んで取得したドメインを入力`(www).xxx.com` を入力して`Verify`をクリック  
 Netlifyはwww付きのドメインをプライマリードメインとして推奨しているようです。なのでwww付きで登録しました。  
-(2019-08-09追記)
-wwwだけでなくapp.example.comのような"サブドメイン"をプライマリードメインとして推奨しています。
+
 
 ### DNS設定
 ---
