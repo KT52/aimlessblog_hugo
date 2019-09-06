@@ -40,3 +40,51 @@ collections:
       - {label: "adsenseTop", name: "adsenseTop", widget: "string", required: false}
       - {label: "adsenseBottom", name: "adsenseBottom", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "GCP"
+    label: "GCP"
+    folder: "content/post/gcp"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date",format: "YYYY-MM-DD"}
+      - {label: "Category", name: "categories", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "adsenseTop", name: "adsenseTop", widget: "string", required: false}
+      - {label: "adsenseBottom", name: "adsenseBottom", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "laravel"
+    label: "Laravel"
+    folder: "content/post/laravel"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date",format: "YYYY-MM-DD"}
+      - {label: "Category", name: "categories", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "adsenseTop", name: "adsenseTop", widget: "string", required: false}
+      - {label: "adsenseBottom", name: "adsenseBottom", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pelican"
+    label: "Pelican"
+    folder: "content/post/pelican"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date",format: "YYYY-MM-DD"}
+      - {label: "Category", name: "categories", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "adsenseTop", name: "adsenseTop", widget: "string", required: false}
+      - {label: "adsenseBottom", name: "adsenseBottom", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
