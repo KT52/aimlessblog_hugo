@@ -24,3 +24,19 @@ collections:
       - {label: "adsenseTop", name: "adsenseTop", widget: "string", required: false}
       - {label: "adsenseBottom", name: "adsenseBottom", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "flask"
+    label: "Flask"
+    folder: "content/post/flask"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date",format: "YYYY-MM-DD"}
+      - {label: "Category", name: "categories", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "adsenseTop", name: "adsenseTop", widget: "string", required: false}
+      - {label: "adsenseBottom", name: "adsenseBottom", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
