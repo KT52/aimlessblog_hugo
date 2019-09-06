@@ -21,6 +21,6 @@ collections:
       - {label: "Category", name: "categories", widget: "string"}
       - {label: "Tags", name: "tags", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "adsenseTop", name: "related_post", widget: "string", required: false}
+      - {label: "adsenseTop", name: "adsenseTop", widget: "string", required: false}
       - {label: "adsenseBottom", name: "adsenseBottom", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
