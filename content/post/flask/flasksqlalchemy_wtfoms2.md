@@ -27,6 +27,7 @@ pip install Flask-WTF
 
 ```python
 from flask_wtf import FlaskForm
+from flask_wtf.csrf import CSRFProtect
 from wtforms import StringField, SubmitField, HiddenField
 from wtforms.validators import DataRequired,Length
 ```
@@ -34,6 +35,7 @@ from wtforms.validators import DataRequired,Length
 と app = Flask(__name__)以下にCSRFトークン生成のための秘密鍵
 
 ```python
+csrf = CSRFProtect(app)
 app.config['SECRET_KEY'] = os.urandom(32)
 ```
 
@@ -65,6 +67,7 @@ from flask import Flask, request, redirect, url_for, render_template
 from flask_sqlalchemy import SQLAlchemy
 import os
 from flask_wtf import FlaskForm
+from flask_wtf.csrf import CSRFProtect
 from wtforms import StringField, SubmitField, HiddenField
 from wtforms.validators import DataRequired,Length
 
@@ -74,6 +77,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///test.db"
 
 # CSRFトークン生成のための秘密鍵
 app.config['SECRET_KEY'] = os.urandom(32)
+csrf = CSRFProtect(app)
 
 db = SQLAlchemy(app)
 
