@@ -1,7 +1,7 @@
 ---
 title: "CentOS7+NginxでLet's EncryptのSSL証明書を取得する"
 date: 2019-10-28
-categories: "Flask"
+categories: "Misc"
 tags: [nginx]
 slug: nginxssl
 adsenseTop: true
