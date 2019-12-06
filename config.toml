@@ -9,6 +9,7 @@ pygmentsUseclasses = false
 pygmentsCodefences = true
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2019"
 
+
 [blackfriday]
 hrefTargetBlank = true
 
@@ -30,17 +31,15 @@ customCSS = ["css/custom.css"]
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
 
-[taxonomies]
-tag ="tags"
-categories = "categories"
-
 [permalinks]
 post = "/:year/:month/:slug/"
 
-[params.sections_left]
-"/tags/" = "Tags"
-"/categories/" = "Categories"
+#[params.sections_left]
+#"/tags/" = "Tags"
 
+
+[taxonomies]
+tag ="tags"
 
 [params.social]
 twitter = ""
