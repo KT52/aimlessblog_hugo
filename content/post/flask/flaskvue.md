@@ -1,8 +1,8 @@
 ---
 title: FlaskとVue.js(Vue CLI)の連携
 date: 2019-12-06
-categories: [Flask]
-tags: [flask,vue]
+categories: ["Flask"]
+tags: ["flask","vue"]
 slug: flaskvue
 adsenseTop: true
 adsenseBottom: true
