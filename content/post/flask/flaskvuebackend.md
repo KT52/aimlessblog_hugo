@@ -181,6 +181,8 @@ vueから送られたデータはjson形式なので`request.get_json()`で受�
 
 これでバックエンド側のAPIセッティングは終了したので次回はフロントエンドを作成していきます。
 
+ソースコードは[こちら](https://github.com/Squigly77/flask_vue_sample)から。
+
 ## 参考
 
 [Flask-RESTful公式](https://flask-restful.readthedocs.io/en/latest/index.html)  
