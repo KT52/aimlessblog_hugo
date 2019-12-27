@@ -28,7 +28,8 @@ npm install --save bootstrap-vue bootstrap
 ## 画面の作成
 
 ブックリストをテーブルで表示してテーブル上で更新と削除ができるようにします。  
-新規登録はテーブルの下に作成します。
+新規登録はテーブルの下に作成します。  
+/src/views/Booklist.vue
 
 ```html
 
