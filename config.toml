@@ -7,7 +7,7 @@ hasCJKLanguage = true
 enableInlineShortcodes = false
 pygmentsUseclasses = false
 pygmentsCodefences = true
-copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2019"
+copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2020"
 
 
 [blackfriday]
