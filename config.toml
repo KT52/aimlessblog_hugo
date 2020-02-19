@@ -5,13 +5,25 @@ theme="kiss"
 
 hasCJKLanguage = true
 enableInlineShortcodes = false
-pygmentsUseclasses = false
-pygmentsCodefences = true
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2020"
 
 
-[blackfriday]
-hrefTargetBlank = true
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.blackFriday]
+   hrefTargetBlank = true
+
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
 
 googleAnalytics = "UA-67464867-3"
 Paginate = 5
