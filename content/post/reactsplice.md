@@ -23,7 +23,7 @@ class TableList extends Component {
       items: [],
     }
 
-    handleDelete(id,index) {
+    handleDelete(id, index) {
       const data = { id: id };
       axios
         .delete("http://localhost:5000/api/mydata", { data: data })
@@ -36,10 +36,10 @@ class TableList extends Component {
     render() {
     return (
       <table>
-        {this.state.items.map((item,index) => (
+        {this.state.items.map((item, index) => (
           <tr key={item.id}>
             <td>{item.name}</td>
-              <button onClick={() => this.handleDelete(item.id,index)}>
+              <button onClick={() => this.handleDelete(item.id, index)}>
               Delete
               </button>
             </tr>
@@ -62,7 +62,7 @@ Hooksも同じだろうと思ってこのようなコードを書く
 function TableList() {
   const [items, setItems] = useState([]);
   
-  const handleDelete = (id,index) => {
+  const handleDelete = (id, index) => {
     const data = { id: id };
     axios
       .delete("http://localhost:5000/api/mydata", { data: data })
@@ -74,7 +74,7 @@ function TableList() {
   }
 
       return (
-        <Button　onClick={() => handleDelete(item.id,index)}>
+        <Button　onClick={() => handleDelete(item.id, index)}>
           Delete
         </Button>
       )
