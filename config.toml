@@ -4,7 +4,7 @@ title = "Aimless Blog"
 theme="kiss"
 
 hasCJKLanguage = true
-#enableInlineShortcodes = false
+enableInlineShortcodes = false
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2020"
 
 
