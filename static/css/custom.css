@@ -1,11 +1,11 @@
-/*.highlight{
-  font-size: 90% !important;
-}*/
+.highlight{
+  font-size: 100% !important;
+}
 
 pre,
 pre code {
   /*background-color: #f5f0e9;*/
   background-color: #040404;
-  color: #42464c;
-  /*color: #f5f0e9;*/
+  /*color: #42464c;*/
+  color: #f5f0e9;
 }
