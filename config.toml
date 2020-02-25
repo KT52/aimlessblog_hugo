@@ -7,24 +7,6 @@ hasCJKLanguage = true
 enableInlineShortcodes = false
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2020"
 
-
-[markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.blackFriday]
-   hrefTargetBlank = true
-
-  [markup.highlight]
-    codeFences = true
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = false
-    noClasses = true
-    style = "dracula"
-    tabWidth = 4
-
 googleAnalytics = "UA-67464867-3"
 Paginate = 5
 summaryLength = 70
@@ -64,6 +46,23 @@ platforms = ["github","facebook","twitter","instagram","email","rss"]
 
 [params]
 addThis = "ra-5b3b6c6367750cca"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.blackFriday]
+   hrefTargetBlank = true
+
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
 
 
 
