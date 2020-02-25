@@ -15,14 +15,14 @@ FlaskとVue.jsで作る簡易Webアプリフロントエンド編です。
 
 バックエンド（API）とのやりとりに必要なaxiosをインストールします。
 
-```
-npm install --save axios
+```sh
+npm install axios
 ```
 
 こちらは必須ではありませんがBootstrapとBootstrap-Vueをインストールします。
 
-```
-npm install --save bootstrap-vue bootstrap
+```sh
+npm install bootstrap-vue bootstrap
 ```
 
 ## 画面の作成

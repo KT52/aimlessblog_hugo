@@ -11,7 +11,7 @@ Laravelの認証機能をローカル環境で試してみた。環境はLaravel
 
 ### 認証機能を生成
 ---
-```
+```sh
 php artisan make:auth
 ```
 
@@ -28,7 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 ---
 database\migrations\にある`_create_users_table.php`と`_create_password_resets_table.php`を利用するデータベースにマイグレーションします。xamppのMySQLを起動するのを忘れずに。
 
-```
+```sh
 php artisan migrate
 ```
 
@@ -63,7 +63,7 @@ registerページでユーザー名、Emailとパスワードを入力するとM
 ---
 パスワードのリセットは送信されたメールから行うので、送信するメールサーバーの設定が必要。`.env`のこの部分を自分の環境に合わせて設定する。
 
-```env
+```ini
 
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.mailtrap.io

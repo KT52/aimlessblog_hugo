@@ -19,7 +19,7 @@ Flask-WTFを使ってデータの挿入と削除機能を実装してみる。
 
 まずはインストール
 
-```
+```sh
 pip install Flask-WTF
 ```
 

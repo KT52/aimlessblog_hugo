@@ -38,31 +38,31 @@ GCPのコンソールページのナビゲーションメニューから、`Comp
 
 CentOSのSELinux と iptablesを無効化します。
 
-```
+```sh
 systemctl disable firewalld
 ```
 
 
 #### /etc/selinux/configを編集
 
-```
+```sh
 cd /etc/selinux/
 ```
 
 念のためバックアップ
 
-```
+```sh
 cp config config_old
 ```
 
-```
+```sh
 vim configで
 #SELINUX=enforcingをコメントアウトして
 SELINUX=disabledを記入
 ```
 
 GCEを再起動（停止→開始）    
-```
+```sh
 systemctl is-enabled firewalld
 getenforce
 ```
@@ -74,16 +74,16 @@ getenforce
 
 sshd_configに使用するポート番号を記入
 
-```
+```sh
 cd /etc/ssh
 ```
-```
+```sh
 cp sshd_config sshd_config_old  念のためsshd_configをバックアップ
 ```
-```
+```sh
 vim sshd_config
 ```
-```
+```sh
 port 44444
 ```
 
@@ -106,7 +106,7 @@ sshdを再起動
 ターミナルソフトで接続する場合もポート番号を22から変更して接続。  
 Google Cloud SDK shellから接続する場合は
 
-```
+```sh
 gcloud compute ssh インスタンス名 --ssh-flag="-P ポート番号"
 ```
 

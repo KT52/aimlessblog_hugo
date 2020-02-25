@@ -13,7 +13,7 @@ Flaskはローカルで使用してたのでデータベースはSQLを直に書
 ## Flask-SQLAlchemyのインストール
 ---
 
-```
+```sh
 pip install flask-sqlalchemy
 ```
 
@@ -62,7 +62,7 @@ nullable=Falseはnullを許可しない設定。
 
 pythonシェル上でテーブル作成。仮想環境で、
 
-```
+```py
 >>> from test import db
 >>> db.create_all()
 ```
@@ -74,7 +74,7 @@ pythonシェル上でテーブル作成。仮想環境で、
 
 とりあえず二人ユーザーを追加してみる
 
-```
+```python
 >>> from test import User
 >>> user1 = User(username = "Yamada",job = "Fighter")
 >>> user2 = User(username = "Oda", job = "Priest")
@@ -90,14 +90,14 @@ db.session.add()でセッションに追加してcommit()でセッションを�
 
 query.all()で全レコードを呼び出す
 
-```
+```py
 >>> User.query.all()
 [<User 1,'Yamada','Fighter'>, <User 2,'Oda','Priest'>]
 ```
 
 filter_byがwhere句でfirst()が条件にマッチした最初のレコードを取得
 
-```
+```py
 >>> User.query.filter_by(username='Yamada').first()
 <User 1,'Yamada','Fighter'>
 
@@ -108,7 +108,7 @@ filter_byがwhere句でfirst()が条件にマッチした最初のレコード�
 
 get()でプライマリーキーを元に呼び出すことができる。
 
-```
+```py
 >>> User.query.get(1)
 <User 1,'Yamada','Fighter'>
 ```
@@ -116,7 +116,7 @@ get()でプライマリーキーを元に呼び出すことができる。
 ## Delete
 ---
 
-```
+```py
 >>> user = User.query.filter_by(username='Oda').first()
 >>> db.session.delete(user)
 >>> db.session.commit()
@@ -126,7 +126,7 @@ get()でプライマリーキーを元に呼び出すことができる。
 ## Update
 ---
 
-```
+```py
 >>> from test import User,db
 >>> r = User.query.get(2)
 >>> r.username = 'Kubo'

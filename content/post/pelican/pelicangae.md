@@ -66,7 +66,7 @@ contentディレクトリに書いた記事を保存したら、`pelican content
 ---
 
 デプロイするのはoutputディレクトリだけでいいので、app.yamlでアップロードしないディレクトリを記述
-```
+```yaml
 skip_files:
 - themes/
 - content/
@@ -82,7 +82,7 @@ skip_files:
 ---
 
 `pelicanconf.py`にURLルールをセッティングをしている場合は`app.yaml`にindex.htmlの場所とアップロードを追記する必要があります。
-```
+```yaml
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/index.html'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
@@ -120,7 +120,7 @@ MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 GAEはスタンダード環境での無料枠が大きいので月間数万PVくらいまでなら無料枠で運営できる…はず。  
 しかし何も設定しないとアクセス過多でインスタンスが複数立ち上がって無料で運用することができなくなる可能性があるので`app.yaml`でこれを制御します。  
 
-```
+```yaml
 instance_class: F1
 automatic_scaling:
   min_idle_instances: automatic

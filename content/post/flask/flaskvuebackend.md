@@ -17,7 +17,7 @@ vue_apiディレクトリの下にfrontend(vue.js)とbackend(flask)ディレク�
 flaskは一応モデルだけ分離して作成しています。  
 flaskとvueの連携については[前回の記事](https://ravness.com/2019/12/flaskvue/)を参照してください。
 
-```
+```txt
 vue_api
    |--frontend
    |--backend

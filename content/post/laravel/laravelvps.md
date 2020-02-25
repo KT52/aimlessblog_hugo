@@ -18,19 +18,19 @@ VPSやApacheのインストール等は[ネコでもわかる！さくらのVPS�
 
 
 
-```
+```sh
 curl https://getcomposer.org/installer | php
 ```
 
 composerコマンドをどこでも使えるようにするために`composer.phar`を`/usr/local/bin/`に移動
 
-```
+```sh
 mv composer.phar /usr/local/bin/composer
 ```
 
 composerとコマンドを打って下記のように表示されれば成功。
 
-```
+```sh
    ______
   / ____/___  ____ ___  ____  ____  ________  _____
  / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
@@ -47,7 +47,7 @@ Composer version 1.8.5 2019-04-09 17:46:47
 
 #### Laravelインストーラーのダウンロード
 
-```
+```sh
 composer global require "laravel/installer"
 ```
 
@@ -56,7 +56,7 @@ composer global require "laravel/installer"
 
 /var/www/html/に移動して
 
-```
+```sh
 composer create-project --prefer-dist laravel/laravel プロジェクト名
 ```
 
@@ -71,7 +71,7 @@ Laravelを使用するにはpublicディレクトリをドキュメントルー�
 
 `sudo vim /etc/httpd/conf/httpd.conf`でhttpd.confの一番下に下記を追加する。  
 
-```conf
+```aconf
 
 NameVirtualHost *:80
 <VirtualHost *:80>
@@ -85,7 +85,7 @@ ServerName www.example.com
 ```
 
 念のため`httpd -t`で間違いがないか確認。問題がなければ
-```
+```sh
 systemctl restart httpd
 ```
 
@@ -96,7 +96,7 @@ systemctl restart httpd
 
 `sudo vim /etc/nginx/conf.d/default.conf`で6行目付近の
 
-```
+```nginx
 
 location / {
         root   /usr/share/nginx/html;
@@ -106,7 +106,7 @@ location / {
 
 を
 
-```
+```nginx
 
 location / {
         root   /var/www/html/プロジェクト名/public;　#ドキュメントルートの変更
@@ -120,7 +120,7 @@ location / {
 
 36行目付近の
 
-```html
+```nginx
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 
         location ~ \.php$ {
@@ -134,7 +134,7 @@ location / {
 
 を
 
-```html
+```nginx
 
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 
@@ -156,7 +156,7 @@ location / {
 laravelプロジェクトのstrageディレクトリとbootstrap/cacheディレクトリを書き込み可能にする必要があるので、  
 cd /var/www/html/プロジェクト名に移動して
 
-```
+```sh
 chmod 777 -R storage
 chmod 777 -R bootstrap/cache/
 ```

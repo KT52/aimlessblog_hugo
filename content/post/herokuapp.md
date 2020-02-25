@@ -118,7 +118,7 @@ if __name__ == '__main__':
 Herokuにアプリを作成してデプロイします。  
 僕はHerokuのダッシュボードから`create new app`で新しいアプリを作成した（してしまった）ので、
 
-```
+```bash
 heroku login
 git init
 heroku git:remote -a アプリ名
@@ -127,7 +127,7 @@ heroku git:remote -a アプリ名
 で新しいGitのレポジトリを作成。  
 その後は
 
-```git
+```bash
 
 git add .
 git commit -m "First commit"
@@ -139,7 +139,7 @@ git push heroku master
 
 ## トークンを環境変数に設定
 
-```
+```bash
 heroku config:set TOKEN="アクセストークンをここに"
 ```
 
@@ -149,7 +149,7 @@ HerokuのsettingページのConfig Varsで設定した環境変数を確認す�
 
 Herokuで定期的にappを実行するにはスケジューラーが必要なのでHeroku Schedulerのアドオンを使用。  
 アドオンを追加するコマンドは
-```
+```bash
 heroku addons:create scheduler:standard
 ```
   

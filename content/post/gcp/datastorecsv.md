@@ -26,7 +26,7 @@ builtins:
 ### bulkloader.yamlを生成
 ---
 
-```
+```sh
 appcfg.py create_bulkloader_config --filename=bulkloader.yaml --application=アプリ名 .
 ```
 
@@ -67,7 +67,7 @@ bango,ken,shiku,chouson
 
 以下のコマンドでデータストアにアップロード
 
-```
+```sh
 appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 --filename=upload.csv --kind=address .
 ```
 
@@ -75,7 +75,7 @@ appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 -
 
 これでアップロード出来るのですが、件数が多いとエラーが出てすべてを登録できなかった。
 
-```
+```txt
 [ERROR   ] Error in WorkerThread-4: [Errno 10057] ソケットが接続されていないか、sendto 呼び出しを使ってデータグラム ソケットで送信するときにア
 ドレスが指定されていないため、データの送受信を要求することは禁じられています。
 [ERROR   ] Error in WorkerThread-5:
@@ -91,13 +91,13 @@ appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 -
 
 [ここ](https://stackoverflow.com/questions/5466900/google-app-engine-bulkloader-unexpected-thread-death)を参考にして、`--batch_size=1000`と`--rps_limit=500`を追加
 
-```
+```sh
 appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 --filename=upload.csv --kind=address --batch_size=1000 --rps_limit=500 .
 ```
 
 
 
-```
+```txt
 [INFO    ] Connecting to xxxxxx.appspot.com/_ah/remote_api
 [INFO    ] Starting import; maximum 1000 entities per post
 .[INFO    ] [WorkerThread-0] Backing off due to errors: 1.0 seconds
@@ -114,13 +114,13 @@ appcfg.py upload_data --config_file=bulkloader.yaml --application=アプリ名 -
 
 ちなみに、データストアのデータをcsvファイルとしてダウンロードする場合は、
 
-```
+```sh
 appcfg.py download_data --application=アプリ名 --config_file=bulkloader.yaml --filename=dl.csv --kind=address --batch_size=1000 --rps_limit=500 .
 ```
 
 で取得できます。`appcfg.py upload_data`を`appcfg.py download_data`に変更して、csvファイル名はディレクトリに同じファイルがあるとエラーが出るので適当な名前を付けるとcsvファイルをダウンロードできます。
 
-```
+```txt
 [INFO    ] Connecting to xxxxxx.appspot.com/_ah/remote_api
 [INFO    ] Downloading kinds: ['address']
 .[INFO    ] address: No descending index on __key__, performing serial download

@@ -14,7 +14,7 @@ CentOS7+Nginxの環境でLet's EncryptのSSL証明書を取得します。
 
 証明書を取得するのに必要な「certbot」をインストールします。
 
-```
+```sh
 sudo yum install certbot
 ```
 
@@ -22,7 +22,7 @@ sudo yum install certbot
 
 今回はサーバーを停止しないで取得できるwebrootオプションを使います。
 
-```
+```sh
 sudo certbot certonly --webroot -w /var/www/html/ -d example.com
 ```
 
@@ -40,7 +40,7 @@ sudo certbot certonly --webroot -w /var/www/html/ -d example.com
 最近のnginxは`ssl_dhparam`が必要（個人サイトレベルなら必要ない？）らしいのでDH交換鍵を作成します。  
 以下のコマンドで作成します。
 
-```
+```sh
 sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 ```
 
@@ -50,7 +50,7 @@ sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 
 取得した証明書をnginxに設定
 
-```
+```nginx
 server {
     listen 443 ssl;
     ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
@@ -71,7 +71,7 @@ listen 443からssl_certificate_keyまでが最低限必要な設定。
 証明書の有効期限は3ヶ月で更新は30日前からしかできないので、--dry-runのオプションで更新できるかテストをします。  
 更新はcertbot renewコマンドで
 
-```
+```sh
 sudo certbot renew --dry-run --webroot -w /var/www/html
 ```
 
@@ -81,13 +81,13 @@ sudo certbot renew --dry-run --webroot -w /var/www/html
 
 更新を自動化するためにcronを設定。  
 
-```
+```sh
 sudo vim /etc/crontab
 ```
 
 に
 
-```
+```sh
 0 3 * * * root /usr/bin/certbot renew --webroot -w /var/www/html --post-hook "systemctl restart nginx"
 ```
 
@@ -97,13 +97,13 @@ sudo vim /etc/crontab
 
 `/etc/letsencrypt/live/example.com`に移動して以下のコマンド
 
-```
+```sh
 openssl x509 -noout -dates -in cert.pem
 ```
 
 で証明書の有効期限を確認することができます。
 
-```
+```sh
 notBefore=Sep 30 02:05:55 2019 GMT
 notAfter=Dec 29 02:05:55 2019 GMT
 ```

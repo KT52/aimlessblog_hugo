@@ -4,7 +4,7 @@ title = "Aimless Blog"
 theme="kiss"
 
 hasCJKLanguage = true
-enableInlineShortcodes = false
+#enableInlineShortcodes = false
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2020"
 
 
@@ -22,7 +22,7 @@ copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2020"
     lineNos = false
     lineNumbersInTable = false
     noClasses = true
-    style = "monokai"
+    style = "dracula"
     tabWidth = 4
 
 googleAnalytics = "UA-67464867-3"
@@ -38,7 +38,7 @@ related = true # Includes related articles at the bottom of the article
 codeCopy = false # Add copy button above code blocks
 
 [params.assets]
-customCSS = ["css/custom.css"]
+#customCSS = ["css/custom.css"]
 
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss

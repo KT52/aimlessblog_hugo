@@ -65,7 +65,7 @@ httpd-develをいれてもmod_wsgiがインストールできない場合はエ�
 `/etc/httpd/conf/httpd.conf` に追記するか、`/etc/httpd/conf.d/にwsgi.conf`ファイルを作成して下記のように記述。  
 僕はwsgi.confを新規作成するやり方なので、`vim /etc/httpd/conf.d/wsgi.conf`で
 
-```conf
+```aconf
 
 # wsgi.conf
 <VirtualHost *:80>
@@ -137,13 +137,13 @@ if __name__ == "__main__":
 
 
 アクセスしたらInternal Server Errorがでたので/var/log/httpd/error_logを確認したところ、
-```
+```sh
 ImportError: No module named flask
 ```
 
 まだエラーが出るので再確認
 
-```
+```sh
 ImportError: No module named werkzeug.exceptions No module named werkzeug.exceptions
 ```
 

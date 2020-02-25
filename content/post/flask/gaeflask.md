@@ -16,7 +16,8 @@ Google App EngineでFlaskを使う時のチュートリアル。
 GAEでサードパーティ製ライブラリを使うにはルートディレクトリにlibディレクトリを作ってそこにライブラリをインストールします。  
 最初にvirtualenvで仮想環境化します。  
 Flaskをインストールする場合は
-```
+
+```sh
 
 mkdir lib
 pip install -t lib/ Flask
@@ -26,7 +27,7 @@ pip install -t lib/ Flask
 
 他のライブラリも同様に入れることができます。requirements.txtを作成して一気に入れる場合は、
 
-```python
+```sh
 pip install -t lib -r requirements.txt
 ```
 でライブラリをインストールできます。
@@ -46,7 +47,7 @@ vendor.add('lib')
 
 プロジェクトのディレクトリ構成はこんな感じになる
 
-```
+```txt
 myproject/
   lib/
   app.yaml

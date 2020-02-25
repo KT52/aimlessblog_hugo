@@ -17,7 +17,7 @@ Google Compute Engine(GCE)でBasic認証付きのプロキシサーバーを立�
 
 最初にプロキシサーバソフトのSquid（スクイッド）をインストール
 
-```
+```sh
 yum install squid
 
 ```
@@ -25,13 +25,13 @@ yum install squid
 ## squid.confの編集
 ---
 
-```
+```sh
 vim /etc/squid/squid.conf
 ```
 
 26行目付近の`acl CONNECT method CONNECT`の下に
 
-```conf
+```aconf
 
 auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/passwd
 auth_param basic realm Squid proxy-caching web server
@@ -44,14 +44,14 @@ acl password proxy_auth REQUIRED
 
 63行目付近の
 
-```conf
+```aconf
 # And finally deny all other access to this proxy
 http_access deny all
 
 ```
 
 に1行追加して
-```conf
+```aconf
 # And finally deny all other access to this proxy
 http_access allow password
 http_access deny all
@@ -62,7 +62,7 @@ http_access deny all
    
 デフォルトのポート番号3128を他の番号に変更するので67行目付近の`http_port 3128`をコメントアウトして新しいポート番号を追加。
 
-```conf
+```aconf
 # Squid normally listens to port 3128
 #http_port 3128
 http_port 35488
@@ -70,7 +70,7 @@ http_port 35488
 
 後はsquid.confの最下行に以下を追加。
 
-```conf
+```aconf
 # プロキシサーバーを使用している端末のローカルIPアドレスを隠蔽化
 forwarded_for off
 visible_hostname unknown
@@ -82,12 +82,12 @@ request_header_access Cache-Control deny all
 
 以上でsquid.confの編集は終わり。
 
-```
+```sh
 systemctl enable squid
 ```
 で自動起動設定。
 
-```
+```sh
 systemctl start squid
 ```
 でSquidを起動。
@@ -96,12 +96,12 @@ systemctl start squid
 ---
 
 htpasswdコマンドを使ってbasic認証をかけるため`httpd-tools`をインストールする。
-```
+```sh
 yum install httpd-tools
 ```
 
 インストールしたらユーザーネームとパスワードを設定するので
-```
+```aconf
 htpasswd -c /etc/squid/passwd ユーザーネーム
 ```
 

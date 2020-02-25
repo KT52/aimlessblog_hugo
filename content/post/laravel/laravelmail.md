@@ -17,7 +17,7 @@ Laravelの認証機能のパスワードリセットでメール送信できな�
 
 `.env`のメール設定はデフォルトで下のようになっている。
 
-```env
+```ini
 
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.mailtrap.io
@@ -30,7 +30,7 @@ MAIL_ENCRYPTION=null
 
 これをGmailから送信するので下のように設定したがエラーが出て送信できなかった。
 
-```env
+```ini
 
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.gmail.com
@@ -62,7 +62,7 @@ configディレクトリの`mail.php`を開き、下記を追加する。
 
 そして、.envに以下の追加をする。
 
-```env
+```ini
 
 MAIL_FROM_ADDRESS=送信元のメールアドレスを記述
 MAIL_FROM_NAME=送信元の名前
