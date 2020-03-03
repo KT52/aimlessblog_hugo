@@ -137,3 +137,23 @@ setPage(items => ({ ...items, items }))
 ```
 
 こう書いても上手くいきました。
+
+## ページネーション機能のあるテーブル （３月３日追記）
+
+ページネーション機能のあるテーブルで２ページ目以降が上の２つのコードだと再描画されなかったので、  
+下記のようにしました。
+
+```react
+const index = items.findIndex(item => item.id === id);
+if (~index) items.splice(index, 1);
+setPage(items => ({ ...items, items }));
+```
+
+[参考](https://stackoverflow.com/questions/53042690/refresh-boostrap-vue-table-after-deleting-a-row)
+
+[Reactドキュメントに](https://ja.reactjs.org/docs/lists-and-keys.html#keys)
+
+>要素の並び順が変更される可能性がある場合、インデックスを key として使用することはお勧めしません。パフォーマンスに悪い影響を与え、コンポーネントの状態に問題を起こす可能性があります。
+
+
+とあるので、findIndexで条件（ここではid）に一致したインデックスを返して、その要素を削除するこの方法がベターなやり方かも。  まぁ他にいい方法が思いつかないのでこれ採用。
