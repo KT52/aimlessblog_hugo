@@ -130,10 +130,8 @@ setItems(newItems);
 と書いてあったのでこれも行けるのでは？と思い、
 
 ```react
-
 items.splice(index, 1);
 setPage(items => ({ ...items, items }))
-
 ```
 
 こう書いても上手くいきました。
