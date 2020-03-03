@@ -6,6 +6,7 @@ theme="kiss"
 hasCJKLanguage = true
 enableInlineShortcodes = false
 copyright = "&copy; <a href=\"https://ravness.com/\">ravness.com</a> 2020"
+enableRobotsTXT = true
 
 googleAnalytics = "UA-67464867-3"
 Paginate = 5
