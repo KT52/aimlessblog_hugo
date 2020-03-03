@@ -2,7 +2,7 @@
 title: LaravelのページネーションとGETパラメータ
 date: 2018-09-02
 categories: [Laravel]
-tags: [laravel,php]
+tags: ["laravel","php","pagination"]
 slug: laravelpagination
 adsenseTop: true
 adsenseBottom: true

@@ -2,7 +2,7 @@
 title: CodeIgniterのページネーションクラスとGETパラメータの受け渡し
 date: 2019-02-11
 categories: ["Misc"]
-tags: ["php","codeigniter"]
+tags: ["php","codeigniter","pagination"]
 slug: "ci3pagination"
 adsenseTop: true
 adsenseBottom: true

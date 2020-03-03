@@ -2,7 +2,7 @@
 title: FlaskのページネーションはFlask-paginateを使うと簡単に実装できる
 date: 2019-07-03
 categoies: [Python]
-tags: [python,flask]
+tags: [python,flask,pagination]
 slug: flaskpaginate
 adsenseTop: true
 adsenseBottom: true

@@ -1,7 +1,7 @@
 ---
 title: React Hooksで配列の要素を削除したあとの再描画について
 date: 2020-02-19
-tags: ["react"]
+tags: ["react","pagination"]
 draft: false
 slug: reactsplice
 adsenseTop: true
