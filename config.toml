@@ -29,12 +29,11 @@ includeContent = true # Includes whole content in rss
 [permalinks]
 post = "/:year/:month/:slug/"
 
-[params.sections_left]
-"/tags/" = "Tags"
-
-
 [taxonomies]
 tag ="tags"
+
+[params.sections_left]
+"/tags/" = "Tags"
 
 [params.social]
 twitter = ""
