@@ -34,7 +34,7 @@ Netlifyはwww付きのドメインをプライマリードメインとして推�
 ![dns](../../../images/checkdns.jpg)  
 
 すると、CNAMEをDNSプロバイダー（エックスドメイン）で編集しなさいみたいに表示されますが、僕はNetlifyのDNSを使用するので、`Set up Netlify DNS`をクリック。  
-Netlifyの[ドキュメント](https://www.netlify.com/docs/custom-domains/)には
+Netlifyの[ドキュメント](https://docs.netlify.com/domains-https/custom-domains/multiple-domains/#apex-domains-and-www-subdomains)には
 
 > Unless your DNS provider supports CNAME flattening, ANAME or ALIAS records for root domains, we strongly recommend setting the www subdomain as your primary domain.  
 DNSプロバイダーがルートドメインのCNAMEフラット化、ANAMEまたはALIASレコードをサポートしていない限り、wwwサブドメインをプライマリドメインとして設定することを強くお勧めします。
