@@ -30,7 +30,7 @@ includeContent = true # Includes whole content in rss
 post = "/:year/:month/:slug/"
 
 [taxonomies]
-tag ="tags"
+tag = "tags"
 
 [params.sections_left]
 "/tags/" = "Tags"
