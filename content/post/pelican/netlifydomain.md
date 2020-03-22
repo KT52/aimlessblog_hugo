@@ -2,7 +2,7 @@
 title: Netlifyで独自ドメインを設定する
 date: 2018-07-01
 categories: Pelican
-tags: [netlify,python,pelican]
+tags: ["netlify","python","pelican"]
 slug: netlifydomain
 adsenseTop: true
 adsenseBottom: true
