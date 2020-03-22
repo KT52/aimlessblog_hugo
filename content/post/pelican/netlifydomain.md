@@ -45,7 +45,7 @@ DNSプロバイダーがルートドメインのCNAMEフラット化、ANAMEま�
 ![dnsconf](../../../images/dnsconf3.jpg)
 
   
-wwwなしのドメインでAレコードをドメインプロバイダーのDNSレコードに記述するやり方だとNetlifyの強力なCDNを利用することができないので注意。
+AレコードをドメインプロバイダーのDNSレコードに記述するやり方だとNetlifyの強力なCDNを利用することができないので注意。
   
 
 ![dns](../../../images/dnsconf1.jpg)
