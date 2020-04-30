@@ -1,6 +1,6 @@
 ---
 title: Vercel（旧 Zeit Now）へのデプロイ覚え書き（Flask + Next.js）
-date: 2020-05-01
+date: 2020-04-30
 categories: ["Flask"]
 tags: ["flask","next.js"]
 slug: nowflasknextjs
