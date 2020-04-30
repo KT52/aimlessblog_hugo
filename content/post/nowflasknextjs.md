@@ -120,7 +120,7 @@ Apexドメイン（example.com)を使用する場合は
 ![s_cloudflare](../../../images/s_cloudflare.jpg)
 
 Apexドメインも同じCNAMEを設定してCNAME Flattening化してサブドメインにリダイレクト設定をしています。  
-SSL（Let's Encrypt）の設定も自動でしてくれます。
+SSL（Let's Encrypt）の設定もVercelが自動でしてくれます。
 ドメインのリダイレクト設定はドメイン設定後、VercelのドメインページのEDITから変更できます。
 
 ## おわりに
