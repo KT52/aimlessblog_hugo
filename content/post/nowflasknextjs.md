@@ -68,7 +68,7 @@ now
 ```
 Now CLI 18.0.0
 ? Set up and deploy “D:\usr\app_nextjs\frontend2”? [Y/n] y
-? Which scope do you want to deploy to? squigly77
+? Which scope do you want to deploy to? aimlessblog
 ? Link to existing project? [y/N] n
 ? What’s your project’s name? frontend2
 ? In which directory is your code located? ./
