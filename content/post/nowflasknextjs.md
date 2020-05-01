@@ -9,7 +9,7 @@ adsenseBottom: true
 draft: false
 ---
 
-Vercel（旧 Zeit Now）にFlaskとNext.jsをデプロイしたのでその覚え書き。  
+[Vercel](https://vercel.com/)（旧 Zeit Now）にFlaskとNext.jsをデプロイしたのでその覚え書き。  
 FlaskはGitHubからNext.jsはVercel CLIからデプロイしています。  
 nowコマンドが使える前提で進めるのでまだの人は公式とかqiitaとかを参考にしてください。
 
@@ -121,7 +121,9 @@ Apexドメイン（example.com)を使用する場合は
 
 Apexドメインも同じCNAMEを設定してCNAME Flattening化してサブドメインにリダイレクト設定をしています。  
 SSL（Let's Encrypt）の設定もVercelが自動でしてくれます。
-ドメインのリダイレクト設定はドメイン設定後、VercelのドメインページのEDITから変更できます。
+ドメインのリダイレクト設定はドメイン設定後、VercelのドメインページのEDITから変更できます。  
+
+参考:[公式ドキュメント](https://vercel.com/docs/v2/custom-domains)
 
 ## おわりに
 
