@@ -6,7 +6,7 @@ tags: ["next.js","netlify","gae","firebase","react"]
 slug: nextjsdeploy
 adsenseTop: true
 adsenseBottom: true
-draft: true
+draft: false
 ---
 
 Next.jsをNetlify、Firebase Hosting、Google App Engineにデプロイするときの設定などのメモ。  
