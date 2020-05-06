@@ -37,6 +37,7 @@ Flaskで作成したREST APIアプリは問題なく動いています。
 ## Next.js
 
 Next.jsはVercel CLIからデプロイしました。とあるジャンルのカタログサイトで画像が4000枚くらいあって面倒なのでGitHubにPushするのはやめました。まあデプロイも面倒だけど……  
+（最終的に画像はAmazon S3 + CloudflareのCDNで運用）  
 
 package.jsonのscriptsは以下のようになっています
 
