@@ -37,7 +37,7 @@ vue_api
 - Flask-SQLAlchemy ……ORM
 - Flask-CORS ……オリジン間リソース共有ライブラリ
 - Flask-Marshmallow ……ORM等から取得したデータをjsonに変換できるようにするライブラリ
-- ~~marshmallow-sqlalchemy ……Flask-Marshmallowだけではエラーが出たので追加~~
+- marshmallow-sqlalchemy ……Flask-Marshmallowだけではエラーが出たので追加
 
 ## app.py
 
@@ -182,7 +182,7 @@ vueから送られたデータはjson形式なので`request.get_json()`で受�
 Flask-Marshmallow最新版0.12.0 (2020-04-26)では`ModelSchema`と`TableSchema`が非推奨で、  
 代わりに`ma.SQLAlchemySchema`と`ma.SQLAlchemyAutoSchema`の使用が強く推奨されたいるので、  
 上のコードの`ma.ModelSchema`を`ma.SQLAlchemyAutoSchema`に変更します。  
-あと、僕の環境ではmarshmallow_sqlalchemyがなくても動いているので`from marshmallow_sqlalchemy import ModelSchema`を消去。
+あと`from marshmallow_sqlalchemy import ModelSchema`は必要なさそうなので消去したけど、`marshmallow_sqlalchemy`を最新版にしないと動かなかったです。
 
 詳しくは[Flask-Marshmallowのchangelog](https://flask-marshmallow.readthedocs.io/en/latest/changelog.html#changelog)
 を参照してください。  
