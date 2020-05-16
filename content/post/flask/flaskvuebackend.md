@@ -37,7 +37,7 @@ vue_api
 - Flask-SQLAlchemy ……ORM
 - Flask-CORS ……オリジン間リソース共有ライブラリ
 - Flask-Marshmallow ……ORM等から取得したデータをjsonに変換できるようにするライブラリ
-- marshmallow-sqlalchemy ……Flask-Marshmallowだけではエラーが出たので追加
+- ~~marshmallow-sqlalchemy ……Flask-Marshmallowだけではエラーが出たので追加~~
 
 ## app.py
 
@@ -103,7 +103,6 @@ putとdeleteでは処理後に`make_response()`と`jsonify()`を使って`{"mess
 
 CORSを利用すると、flaskのサーバーを立てた上でvue側のサーバー「localhost:8080」からもapp.pyにアクセスできるようになります。  
 フロントエンド側のファイルを修正するごとに「npm run build」するのが面倒でないならCORSは必要ありません。
-
 
 ## model.py
 
@@ -178,6 +177,15 @@ CRUDの処理はmodel.pyに記述。
 チュートリアル的なものなのでデータベースのカラムはid、タイトル、著者、出版社だけです。  
 SQLAlchemyで取得したデータはjsonifyを使ってもjsonに変換できないのでFlask-Marshmallowを介してjsonに変換しています。  
 vueから送られたデータはjson形式なので`request.get_json()`で受け取ります。  
+
+(追記)
+Flask-Marshmallow最新版0.12.0 (2020-04-26)では`ModelSchema`と`TableSchema`が非推奨で、  
+代わりに`ma.SQLAlchemySchema`と`ma.SQLAlchemyAutoSchema`の使用が強く推奨されたいるので、  
+上のコードの`ma.ModelSchema`を`ma.SQLAlchemyAutoSchema`に変更します。  
+あと、僕の環境ではmarshmallow_sqlalchemyがなくても動いているので`from marshmallow_sqlalchemy import ModelSchema`を消去。
+
+詳しくは[Flask-Marshmallowのchangelog](https://flask-marshmallow.readthedocs.io/en/latest/changelog.html#changelog)
+を参照してください。  
 
 これでバックエンド側のAPIセッティングは終了したので次回はフロントエンドを作成していきます。
 
