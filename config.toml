@@ -40,9 +40,12 @@ twitter = ""
 github = "Squigly77"
 email = ""
 rss = "index.xml" # Add this to show RSS button in social.
+tumblr = "lollapal00za.tumblr.com"
+
+
 
 [params.social.config]
-platforms = ["github","facebook","twitter","instagram","email","rss"]
+platforms = ["github","facebook","twitter","instagram","email","rss","tumblr"]
 
 [params]
 addThis = "ra-5b3b6c6367750cca"
