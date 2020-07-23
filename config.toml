@@ -19,6 +19,7 @@ homeTitle = "Aimless Blog" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = false # Add copy button above code blocks
+taxonomiesCount = true # Add taxonomies count
 
 [params.assets]
 customCSS = ["css/custom.css"]
