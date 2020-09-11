@@ -244,10 +244,12 @@ dict型じゃないよ、とエラーが出ます。
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 from database import crud, model　# crud.py,model.pyのインポート
-from database.database import SessionLocal, engine, get_db # database.pyからインポート
+from database.database import engine, get_db # database.pyからインポート
 from fastapi.middleware.cors import CORSMiddleware　# CORS
 from schemas import Update, Add, Datasout # schemas.pyからインポート
 from typing import List
+
+model.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
