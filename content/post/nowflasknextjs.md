@@ -85,7 +85,7 @@ next.jsの場合はAuto-detected以下のように自動でBuild Command等を�
 
 ![build](../../../images/vercel.com.jpg)
 
-画像のようになってればOK。もしなってないなら `override`をONにして手動で入力しましょう。  
+Vercelのプロジェクト（この記事ではfrontend2）のsettingsページで画像のようになってればOK。もしなってないなら `override`をONにして手動で入力しましょう。  
 
 deployとbuildがエラー無しで成功するとaaaaa-xxxxx.now.shというURLでアクセスできるようになります。  
 nowコマンドはデプロイするたびにxxxxxの部分がユニークな英数字のURLを作成してしまうので、  
