@@ -54,6 +54,9 @@ Flaskのドキュメントでは関数allowed_fileでALLOWED_EXTENSIONSの許可
 
 ## FastAPIでは
 
+FastAPIでアップロードファイルを受け取るにはpython-multipartが必要なので、  
+`pip install python-multipart`でインストールする。
+
 ```py
 from fastapi import FastAPI, File, UploadFile
 import os
