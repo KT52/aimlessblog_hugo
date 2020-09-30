@@ -1,5 +1,0 @@
-[[redirects]]
-from = "/*"
-to = "/posts/:splat"
-status = 301
-force = true
