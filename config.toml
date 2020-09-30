@@ -28,8 +28,8 @@ customCSS = ["css/custom.css"]
 includeContent = true # Includes whole content in rss
 
 [permalinks]
-post = "/:year/:month/:slug/"
-# post = "/posts/:slug"
+# post = "/:year/:month/:slug/"
+post = "/posts/:slug"
 
 [taxonomies]
 tag = "tags"
