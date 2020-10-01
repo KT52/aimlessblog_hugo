@@ -1,6 +1,6 @@
 [[redirects]]
-from = "/tags/page/*/"
-to = "/tags/page/:number/"
+from = "/tags/page/:num/"
+to = "/tags/page/:num/"
 status = 301
 force = true
 
