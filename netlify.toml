@@ -1,11 +1,11 @@
 [[redirects]]
 from = "/tags/page/*/"
-to = "/tags/:splat/"
+to = "/tags/page/:number/"
 status = 301
 force = true
 
 [[redirects]]
 from = "/:year/:month/:slug/"
-to = "/posts/:slug"
+to = "/posts/:slug/"
 status = 301
 force = true
