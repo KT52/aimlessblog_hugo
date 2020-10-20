@@ -12,6 +12,9 @@ googleAnalytics = "UA-67464867-3"
 Paginate = 5
 summaryLength = 70
 
+[params.assets]
+customCSS = ["css/custom.css"]
+
 [params.info]
 adsense = "9772961045289102" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
@@ -21,8 +24,6 @@ related = true # Includes related articles at the bottom of the article
 codeCopy = false # Add copy button above code blocks
 taxonomiesCount = true # Add taxonomies count
 
-[params.assets]
-customCSS = ["css/custom.css"]
 
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
