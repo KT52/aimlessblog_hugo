@@ -81,7 +81,7 @@ Gmailを使う場合は[Googleアカウント](https://myaccount.google.com/)か
 ### Gmailで2段階認証を利用している場合
 ---
 
-- [Googleアカウント](https://myaccount.google.com/)からログインとセキュリティ
+- [Googleアカウント](https://myaccount.google.com/)の左のメニューからセキュリティを選択。
 - Googleへのログインのところにある`アプリ パスワード`をクリック。
 - アプリを選択をクリックしてその他（名前を入力）を選択。適当に名前をつける。
 - 生成を押すと16桁のパスワードが生成される。
